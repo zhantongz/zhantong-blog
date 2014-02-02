@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Zhantong's Blog]]></title>
-  <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Techology | Zhantong's Blog]]></title>
+  <link href="http://blog.zhantong.org/categories/techology/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
   <updated>2014-02-02T23:17:56+00:00</updated>
   <id>http://blog.zhantong.org/</id>

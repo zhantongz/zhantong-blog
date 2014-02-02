@@ -1,8 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>
+            http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress/
+        </loc>
+        <lastmod>2014-02-02T23:17:43+00:00</lastmod>
+    </url>
+    <url>
         <loc>http://blog.zhantong.org/blog/archives/</loc>
-        <lastmod>2014-02-02T22:30:49+00:00</lastmod>
+        <lastmod>2014-02-02T23:17:43+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/robots.txt</loc>
@@ -10,6 +16,6 @@
     </url>
     <url>
         <loc>http://blog.zhantong.org/</loc>
-        <lastmod>2014-02-02T22:30:49+00:00</lastmod>
+        <lastmod>2014-02-02T23:17:43+00:00</lastmod>
     </url>
 </urlset>
