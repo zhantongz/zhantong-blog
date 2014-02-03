@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Test | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/test/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-03T02:50:38+00:00</updated>
+  <updated>2014-02-03T03:26:33+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -18,14 +18,14 @@
     <link href="http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/"/>
     <updated>2014-02-02T23:32:36+00:00</updated>
     <id>http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo</id>
-    <content type="html"><![CDATA[<p><code>php php:
+    <content type="html"><![CDATA[<p><code>php php
 &lt;?php
 echo "hello, world";
 echo "你好世界";
 echo "saluton, mondo";
 ?&gt;
 </code>
-``` cpp c++:</p>
+``` cpp c++</p>
 
 <h1>include <iostream></h1>
 
@@ -39,7 +39,7 @@ echo "saluton, mondo";
   return 0;
 }
 <code>
-</code> go golang:<br/>
+</code> go golang <br/>
 package main</p>
 
 <p>func main() {
@@ -48,7 +48,7 @@ package main</p>
   println(&ldquo;saluton, mondo&rdquo;)
 }
 <code>
-</code> html HTML:
+</code> html HTML
 &lt;!DOCTYPE html>
 <html>
   <head></p>
