@@ -5,20 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Zhantong's Blog</title>
+  <title>C++ 分解偶数为两个奇质数之和 - [C++]Decompose Even Numbers as the Sums of Two Odd Primes - Zhantong's Blog</title>
   <meta name="author" content="Zhantong Zhang">
 
   
-  <meta name="description" content="php1
-2
-3
-4
-5
-&lt;?php
-echo &quot;hello, world&quot;;
-echo &quot;你好世界&quot;;
-echo &quot;saluton, mondo&quot;;
-?&gt; c++1
+  <meta name="description" content="分解偶数为两个奇质数之和的程序：
+A program to decomposit even numbers as the sums of two odd primes: Source-源代码1
 2
 3
 4
@@ -29,7 +21,16 @@ echo &quot;saluton, mondo&quot;;
 9
 10
 11
-# &hellip;">
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -38,7 +39,7 @@ echo &quot;saluton, mondo&quot;;
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.zhantong.org">
+  <link rel="canonical" href="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhantong's Blog" type="application/atom+xml">
@@ -83,173 +84,12 @@ echo &quot;saluton, mondo&quot;;
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/">Hello World! 你好世界！Saluton Mondo!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-02T23:32:36+00:00" pubdate data-updated="true">2014-02-02</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><figcaption><span>php</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
-</span><span class='line'><span class="k">echo</span> <span class="s2">&quot;hello, world&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">echo</span> <span class="s2">&quot;你好世界&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">echo</span> <span class="s2">&quot;saluton, mondo&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<figure class='code'><figcaption><span>c++</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello, world&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;你好世界&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;saluton, mondo&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<figure class='code'><figcaption><span>golang </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='go'><span class='line'><span class="kn">package</span> <span class="nx">main</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nb">println</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">)</span>
-</span><span class='line'>  <span class="nb">println</span><span class="p">(</span><span class="s">&quot;你好世界&quot;</span><span class="p">)</span>
-</span><span class='line'>  <span class="nb">println</span><span class="p">(</span><span class="s">&quot;saluton, mondo&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<figure class='code'><figcaption><span>HTML</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;head&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;title&gt;</span>hello, world<span class="nt">&lt;/title&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/head&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;body&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;p&gt;</span>hello, world<span class="nt">&lt;/p&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;p&gt;</span>你好世界<span class="nt">&lt;/p&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;p&gt;</span>saluton, mondo<span class="nt">&lt;/p&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2014/02/02/migrated-to-github-pages-powered-by-octopress/">Migrated to Github Pages Powered by Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-02T23:16:16+00:00" pubdate data-updated="true">2014-02-02</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Migrated to Github Pages!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/">C++ 分解偶数为两个奇质数之和 - [C++]Decompose Even Numbers as the Sums of Two Odd Primes</a></h1>
+      <h1 class="entry-title">C++ 分解偶数为两个奇质数之和 - [C++]Decompose Even Numbers as the Sums of Two Odd Primes</h1>
     
     
       <p class="meta">
@@ -272,7 +112,7 @@ echo &quot;saluton, mondo&quot;;
   </header>
 
 
-  <div class="entry-content"><p>分解偶数为两个奇质数之和的程序：
+<div class="entry-content"><p>分解偶数为两个奇质数之和的程序：
 A program to decomposit even numbers as the sums of two odd primes:</p>
 
 <figure class='code'><figcaption><span>Source-源代码</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -352,18 +192,63 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 
 <p><img src="/images/c++-decomposit-2013-02-12.png" title="Screenshot" ></p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Zhantong Zhang</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2013-02-13T07:24:00+00:00" pubdate data-updated="true">2013-02-13</time>
+      
+
+<span class="categories">
   
-  <div class="pagination">
+    <a class='category' href='/categories/c-plus-plus/'>c++</a>, <a class='category' href='/categories/math/'>math</a>, <a class='category' href='/categories/programming/'>programming</a>
+  
+</span>
+
+
+    </p>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/" data-via="zhantongz" data-counturl="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/2014/02/02/migrated-to-github-pages-powered-by-octopress/" title="Next Post: Migrated to Github Pages powered by Octopress">Migrated to Github Pages powered by Octopress &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -388,7 +273,7 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/zhantongz">@zhantongz</a> on GitHub
@@ -428,7 +313,7 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 
 <section>
   <h1>About Me</h1>
-  <p>A person with limited programming skills (Java, PHP, C++, Go and Javascript)&#8230;</p>
+  <p>A person with limited programming skills (Java, PHP, C++, Go and Javascript)...</p>
 <p>Strong supporter of copyleft</p>
 <p><b>Some Softwares I use:</b><br />Arch Linux, Emacs, Gnome, Qt, LaTeX, fcitx, LibreOffice, Firefox, GIMP, Inkscape</p>
 <p>中文 English Esperanto Français</p>
@@ -453,6 +338,7 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 
   
 </aside>
+
 
     </div>
   </div>
