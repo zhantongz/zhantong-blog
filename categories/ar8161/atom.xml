@@ -4,10 +4,10 @@
   <title><![CDATA[Category: Ar8161 | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/ar8161/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-04T01:12:42+00:00</updated>
+  <updated>2014-02-04T01:45:30+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
-    <name><![CDATA[Zhantong Zhang]]></name>
+    <name><![CDATA[Zhantong Zhsang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -26,6 +26,9 @@
 
 <p>At last, solve it with the compat-wireless 2.6.</p>
 
+<!-- more -->
+
+
 <p>First, install the kernel-headers, kernel, and gcc from dvd/cd.</p>
 
 <p><code>console
@@ -38,12 +41,16 @@ $ sudo yum install kernel-headers kernel gc
 
 <p>Third, uncompress and install the driver.</p>
 
-<p><code>console
-$ su
-\# ./scripts/driver-select alx
-\# make
-\# make install
-</code></p>
+<p>``` console
+$ su</p>
+
+<h1>./scripts/driver-select alx</h1>
+
+<h1>make</h1>
+
+<h1>make install</h1>
+
+<p>```</p>
 ]]></content>
   </entry>
   

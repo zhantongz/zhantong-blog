@@ -4,10 +4,10 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-04T01:12:42+00:00</updated>
+  <updated>2014-02-04T01:45:30+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
-    <name><![CDATA[Zhantong Zhang]]></name>
+    <name><![CDATA[Zhantong Zhsang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -18,7 +18,12 @@
     <link href="http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/"/>
     <updated>2014-02-02T23:32:36+00:00</updated>
     <id>http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo</id>
-    <content type="html"><![CDATA[<figure class='code'><figcaption><span>php</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+    <content type="html"><![CDATA[<p>Hello World! 你好世界！Saluton Mondo!</p>
+
+<!--more-->
+
+
+<figure class='code'><figcaption><span>php</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -126,8 +131,11 @@
 
 <p>This work is a work for an academic course, however, it is not intending for actions of plagiarism. Plagiarism is a <em><strong>serious offence</strong></em> on academic and personal integrity and may cause the serious consequences in your institution. The only purpose for sharing is to express my opinions and to get different opinions about the topic so that the knowledge can be developed and used.</p>
 
-<p><a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" /></a>
+<p><a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" /></a><br/>
 To achieve the purpose, this document is released under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+<!-- more -->
+
 
 <hr />
 
@@ -171,8 +179,11 @@ To achieve the purpose, this document is released under a <a href="http://creati
     <link href="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/"/>
     <updated>2013-02-13T07:24:00+00:00</updated>
     <id>http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes</id>
-    <content type="html"><![CDATA[<p>分解偶数为两个奇质数之和的程序：
+    <content type="html"><![CDATA[<p>分解偶数为两个奇质数之和的程序：<br/>
 A program to decomposit even numbers as the sums of two odd primes:</p>
+
+<!-- more -->
+
 
 <figure class='code'><figcaption><span>Source-源代码</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -266,6 +277,9 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 
 <p>At last, solve it with the compat-wireless 2.6.</p>
 
+<!-- more -->
+
+
 <p>First, install the kernel-headers, kernel, and gcc from dvd/cd.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -284,9 +298,9 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> su
-</span><span class='line'><span class="go">\# ./scripts/driver-select alx</span>
-</span><span class='line'><span class="go">\# make</span>
-</span><span class='line'><span class="go">\# make install</span>
+</span><span class='line'><span class="gp">#</span> ./scripts/driver-select alx
+</span><span class='line'><span class="gp">#</span> make
+</span><span class='line'><span class="gp">#</span> make install
 </span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
