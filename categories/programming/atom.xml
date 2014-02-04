@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/programming/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-04T07:07:13+00:00</updated>
+  <updated>2014-02-04T19:24:25+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -19,6 +19,9 @@
     <updated>2014-02-04T06:45:21+00:00</updated>
     <id>http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1</id>
     <content type="html"><![CDATA[<p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
+
+<!--more-->
+
 
 <p>First, we need create two Java sources in the same package.
 ``` java Main.java
@@ -49,7 +52,57 @@ package example;</p>
 <p>public class GUIExample extends JFrame {</p>
 
 <p>}
-```</p>
+<code>
+Now, we have a empty class, we need a constructor for this class for a window.
+</code> java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // remove warning in eclipse
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+}
+</code></pre>
+
+<p>}
+<code>
+Til now, no other class refers to GUIExample. Main class is for running the window:
+</code> java Main.java
+package example;</p>
+
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+    GUIExample window = new GUIExample(); // create a GUIExample called window
+    window.setVisible(true); // show the window
+}
+</code></pre>
+
+<p>}
+<code>
+If you run the program, you should see a very small "window" in your desktop environment. Obviously, it should not be such small.
+</code> java Main.java
+package example;</p>
+
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+    GUIExample window = new GUIExample(); // create a GUIExample called window
+    window.setBounds(0, 0, 300, 500); // set the window with size of 300 * 500 at (0, 0) of your screen, i.e. up-left corner
+    window.setVisible(true); // show the window
+}
+</code></pre>
+
+<p>}
+```
+Compile and run; you should see a medium-sized window in your up-left corner. The program doesn&rsquo;t do anything except show a empty window.</p>
+
+<p>Known how to set up a window, we can add components (such as buttons, labels, password fields) into the window.</p>
 ]]></content>
   </entry>
   
