@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-04T01:02:00+00:00</updated>
+  <updated>2014-02-04T01:12:42+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -250,6 +250,45 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 
 
 <p><img src="http://blog.zhantong.org/images/c++-decomposit-2013-02-12.png" title="Screenshot" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17]]></title>
+    <link href="http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/"/>
+    <updated>2013-01-16T03:17:00+00:00</updated>
+    <id>http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17</id>
+    <content type="html"><![CDATA[<p>Absolutely delete M$ Losedows 8 and install Fedora 17.</p>
+
+<p>However&hellip;Fedora 17 does not have driver of the network card.</p>
+
+<p>So I need to find the driver.</p>
+
+<p>At last, solve it with the compat-wireless 2.6.</p>
+
+<p>First, install the kernel-headers, kernel, and gcc from dvd/cd.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> sudo yum install kernel-headers kernel gc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Second, download the compat-wireless (before 2012-05-10, after this date it seems the compate wireless not support AR8161) in another computer and use USB disk to copy it to fedora 17.</p>
+
+<p>The link: <a href="http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2">http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2</a></p>
+
+<p>Third, uncompress and install the driver.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> su
+</span><span class='line'><span class="go">\# ./scripts/driver-select alx</span>
+</span><span class='line'><span class="go">\# make</span>
+</span><span class='line'><span class="go">\# make install</span>
+</span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
   

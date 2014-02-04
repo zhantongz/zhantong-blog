@@ -419,6 +419,72 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/">Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-16T03:17:00+00:00" pubdate data-updated="true">2013-01-16</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Absolutely delete M$ Losedows 8 and install Fedora 17.</p>
+
+<p>However&hellip;Fedora 17 does not have driver of the network card.</p>
+
+<p>So I need to find the driver.</p>
+
+<p>At last, solve it with the compat-wireless 2.6.</p>
+
+<p>First, install the kernel-headers, kernel, and gcc from dvd/cd.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> sudo yum install kernel-headers kernel gc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Second, download the compat-wireless (before 2012-05-10, after this date it seems the compate wireless not support AR8161) in another computer and use USB disk to copy it to fedora 17.</p>
+
+<p>The link: <a href="http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2">http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2</a></p>
+
+<p>Third, uncompress and install the driver.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> su
+</span><span class='line'><span class="go">\# ./scripts/driver-select alx</span>
+</span><span class='line'><span class="go">\# make</span>
+</span><span class='line'><span class="go">\# make install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -445,6 +511,10 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
     
       <li class="post">
         <a href="/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/">C++ 分解偶数为两个奇质数之和 - [C++]Decompose Even Numbers as the Sums of Two Odd Primes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/">Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17</a>
       </li>
     
   </ul>
