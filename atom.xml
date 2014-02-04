@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-04T04:07:23+00:00</updated>
+  <updated>2014-02-04T07:07:13+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (1)]]></title>
+    <link href="http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/"/>
+    <updated>2014-02-04T06:45:21+00:00</updated>
+    <id>http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1</id>
+    <content type="html"><![CDATA[<p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
+
+<p>First, we need create two Java sources in the same package.</p>
+
+<figure class='code'><figcaption><span>Main.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let GUIExample extend JFrame, i.e. GUIExample is a JFrame (a window). Don&rsquo;t forget import appropriate packages/classes.</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello World! 你好世界！Saluton Mondo!]]></title>
@@ -127,13 +191,9 @@
     <link href="http://blog.zhantong.org/2013/11/29/ela-20-1-brave-new-world-info/"/>
     <updated>2013-11-29T07:45:00+00:00</updated>
     <id>http://blog.zhantong.org/2013/11/29/ela-20-1-brave-new-world-info</id>
-    <content type="html"><![CDATA[<h2></h2>
+    <content type="html"><![CDATA[<h2>Background Information</h2>
 
-<p>Background Information</p>
-
-<h4></h4>
-
-<p>Technology Development with Utopia and Dystopia</p>
+<h4>Technology Development with Utopia and Dystopia</h4>
 
 <p>When Huxley wrote Brave New World, the Western society has completed industrialization and colonized many regions in the World with new weapon technologies. In 1920s and 1930s, huge development in technologies such as television, more wider radio system and mass production of cars and planes also caused the raising of consumerism. People were enjoying variety of entertainment and spend money on industrial products. In this context, people were looking forward a utopia.</p>
 
@@ -146,9 +206,7 @@
 
 <p>In that “ideal” society, however, is not actually ideal. Huxley builds the “ideal” society to prove utopia is dystopia. A dystopia is a extremely bad society. In the World State, people are without any freedom. All the happiness is taught by the state. People are no longer real people. Huxley believes that technological advancement not necessarily leads to an ideal society but a society without real people.</p>
 
-<h4></h4>
-
-<p>Historical References related to Soviet Union in Chapter I to VI</p>
+<h4>Historical References related to Soviet Union in Chapter I to VI</h4>
 
 <p>In Brave New World, Huxley refers to many people and events happened at his time including Henry Ford, Karl Marx, establishment of Soviet Union, etc. The people referred to are most the ones who represent an ideology. Due to the WWI and the Great Depression, the socialist/communist ideology was raising and the Russian Revolution caused a communist regime. There are many allusions made related to Soviet Union.</p>
 

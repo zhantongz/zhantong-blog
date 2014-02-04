@@ -9,7 +9,7 @@
   <meta name="author" content="Zhantong Zhang">
 
   
-  <meta name="description" content="Hello World! 你好世界！Saluton Mondo! ">
+  <meta name="description" content="Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +67,100 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2014/02/04/java-swing-gui-intro-1/">Java Swing GUI Intro (1)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-04T06:45:21+00:00" pubdate data-updated="true">2014-02-04</time>
+        
+           | <a href="/2014/02/04/java-swing-gui-intro-1/#disqus_thread"
+             data-disqus-identifier="http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
+
+<p>First, we need create two Java sources in the same package.</p>
+
+<figure class='code'><figcaption><span>Main.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let GUIExample extend JFrame, i.e. GUIExample is a JFrame (a window). Don&rsquo;t forget import appropriate packages/classes.</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -182,13 +276,9 @@
   </header>
 
 
-  <div class="entry-content"><h2></h2>
+  <div class="entry-content"><h2>Background Information</h2>
 
-<p>Background Information</p>
-
-<h4></h4>
-
-<p>Technology Development with Utopia and Dystopia</p>
+<h4>Technology Development with Utopia and Dystopia</h4>
 
 <p>When Huxley wrote Brave New World, the Western society has completed industrialization and colonized many regions in the World with new weapon technologies. In 1920s and 1930s, huge development in technologies such as television, more wider radio system and mass production of cars and planes also caused the raising of consumerism. People were enjoying variety of entertainment and spend money on industrial products. In this context, people were looking forward a utopia.</p>
 
@@ -337,15 +427,15 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/02/04/java-swing-gui-intro-1/">Java Swing GUI Intro (1)</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/">Hello World! 你好世界！Saluton Mondo!</a>
       </li>
     
       <li class="post">
         <a href="/2014/02/02/migrated-to-github-pages-powered-by-octopress/">Migrated to Github Pages Powered by Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/11/29/ela-20-1-brave-new-world-info/">ELA 20-1 Brave New World Background Info.</a>
       </li>
     
   </ul>
@@ -400,7 +490,7 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 </section>
 <section>
   <h1>Tag Cloud</h1>
-    <ul id="category-list"><a href='/categories/ar8161' style='font-size: 120.0%'>ar8161(1)</a> <a href='/categories/atheros' style='font-size: 120.0%'>atheros(1)</a> <a href='/categories/blog' style='font-size: 120.0%'>blog(1)</a> <a href='/categories/c-plus-plus' style='font-size: 120.0%'>c++(1)</a> <a href='/categories/drivers' style='font-size: 120.0%'>drivers(1)</a> <a href='/categories/ela' style='font-size: 120.0%'>ELA(1)</a> <a href='/categories/ethernet' style='font-size: 120.0%'>ethernet(1)</a> <a href='/categories/fedora' style='font-size: 120.0%'>fedora(1)</a> <a href='/categories/github' style='font-size: 120.0%'>github(1)</a> <a href='/categories/life' style='font-size: 160.0%'>life(3)</a> <a href='/categories/linux' style='font-size: 120.0%'>linux(1)</a> <a href='/categories/math' style='font-size: 120.0%'>math(1)</a> <a href='/categories/programming' style='font-size: 120.0%'>programming(1)</a> <a href='/categories/school' style='font-size: 120.0%'>school(1)</a> <a href='/categories/technology' style='font-size: 120.0%'>technology(1)</a> <a href='/categories/techology' style='font-size: 120.0%'>techology(1)</a> <a href='/categories/test' style='font-size: 120.0%'>test(1)</a> </ul>
+    <ul id="category-list"><a href='/categories/ar8161' style='font-size: 120.0%'>ar8161(1)</a> <a href='/categories/atheros' style='font-size: 120.0%'>atheros(1)</a> <a href='/categories/blog' style='font-size: 120.0%'>blog(1)</a> <a href='/categories/c-plus-plus' style='font-size: 120.0%'>c++(1)</a> <a href='/categories/drivers' style='font-size: 120.0%'>drivers(1)</a> <a href='/categories/ela' style='font-size: 120.0%'>ELA(1)</a> <a href='/categories/ethernet' style='font-size: 120.0%'>ethernet(1)</a> <a href='/categories/fedora' style='font-size: 120.0%'>fedora(1)</a> <a href='/categories/github' style='font-size: 120.0%'>github(1)</a> <a href='/categories/gui' style='font-size: 120.0%'>gui(1)</a> <a href='/categories/java' style='font-size: 120.0%'>java(1)</a> <a href='/categories/life' style='font-size: 160.0%'>life(3)</a> <a href='/categories/linux' style='font-size: 120.0%'>linux(1)</a> <a href='/categories/math' style='font-size: 120.0%'>math(1)</a> <a href='/categories/programming' style='font-size: 140.0%'>programming(2)</a> <a href='/categories/school' style='font-size: 120.0%'>school(1)</a> <a href='/categories/technology' style='font-size: 160.0%'>technology(3)</a> <a href='/categories/test' style='font-size: 120.0%'>test(1)</a> <a href='/categories/tutorial' style='font-size: 120.0%'>tutorial(1)</a> </ul>
 </section>
 
   
@@ -464,7 +554,7 @@ A program to decomposit even numbers as the sums of two odd primes:</p>
 
 
 
-<p style="color: white; text-align: right; font-family: Artifika"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />A site supported by <a style="color: green" href="http://lab.zhantong.org">Zhantong Lab</a><p>
+<p style="color: white; text-align: right; font-family: Artifika"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" title="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License unless otherwise indicated." alt="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License unless otherwise indicated." src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />A site supported by <a style="color: green" href="http://lab.zhantong.org">Zhantong Lab</a><p>
 
 
 </body>

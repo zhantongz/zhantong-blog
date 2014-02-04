@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/programming/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-04T04:07:23+00:00</updated>
+  <updated>2014-02-04T07:07:13+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (1)]]></title>
+    <link href="http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/"/>
+    <updated>2014-02-04T06:45:21+00:00</updated>
+    <id>http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1</id>
+    <content type="html"><![CDATA[<p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
+
+<p>First, we need create two Java sources in the same package.
+``` java Main.java
+package example;</p>
+
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+
+}
+</code></pre>
+
+<p>}
+<code>
+</code> java GUIExample.java
+package example;</p>
+
+<p>public class GUIExample {</p>
+
+<p>}
+<code>
+Let GUIExample extend JFrame, i.e. GUIExample is a JFrame (a window). Don't forget import appropriate packages/classes.
+</code> java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[C++ 分解偶数为两个奇质数之和 - [C++]Decompose Even Numbers as the Sums of Two Odd Primes]]></title>

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: C++ - Zhantong's Blog</title>
+  <title>Java Swing GUI Intro (1) - Zhantong's Blog</title>
   <meta name="author" content="Zhantong Zhang">
 
   
-  <meta name="description" content="Category: c++">
+  <meta name="description" content="Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.zhantong.orgcategories/c-plus-plus">
+  <link rel="canonical" href="http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhantong's Blog" type="application/atom+xml">
@@ -66,36 +66,153 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: C++</h1>
+    
+      <h1 class="entry-title">Java Swing GUI Intro (1)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-04T06:45:21+00:00" pubdate data-updated="true">2014-02-04</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://blog.zhantong.org">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
 
-  
-  <h2>2013</h2>
+<p>First, we need create two Java sources in the same package.</p>
 
-<article>
-  
-<h1><a href="/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/">C++ 分解偶数为两个奇质数之和 - [C++]Decompose Even Numbers as the Sums of Two Odd Primes</a></h1>
-<time datetime="2013-02-13T07:24:00+00:00" pubdate><span class='month'>Feb</span> <span class='day'>13</span> <span class='year'>2013</span></time>
+<figure class='code'><figcaption><span>Main.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/c-plus-plus/'>c++</a>, <a class='category' href='/categories/math/'>math</a>, <a class='category' href='/categories/programming/'>programming</a></span>
-</footer>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>Let GUIExample extend JFrame, i.e. GUIExample is a JFrame (a window). Don&rsquo;t forget import appropriate packages/classes.</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Zhantong Zhang</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-04T06:45:21+00:00" pubdate data-updated="true">2014-02-04</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/gui/'>gui</a>, <a class='category' href='/categories/java/'>java</a>, <a class='category' href='/categories/programming/'>programming</a>, <a class='category' href='/categories/technology/'>technology</a>, <a class='category' href='/categories/tutorial/'>tutorial</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/" data-via="zhantongz" data-counturl="http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/" title="Previous Post: Hello World! 你好世界！Saluton Mondo!">&laquo; Hello World! 你好世界！Saluton Mondo!</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -192,7 +309,10 @@
       var disqus_shortname = 'zhantongblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/';
+        var disqus_url = 'http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
