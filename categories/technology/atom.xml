@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/technology/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-05T02:48:31+00:00</updated>
+  <updated>2014-02-05T06:43:05+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,103 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (2)]]></title>
+    <link href="http://blog.zhantong.org/2014/02/05/java-swing-gui-intro-2/"/>
+    <updated>2014-02-05T06:22:41+00:00</updated>
+    <id>http://blog.zhantong.org/2014/02/05/java-swing-gui-intro-2</id>
+    <content type="html"><![CDATA[<p>In the last post, we created a simple and empty window. In this post, we&rsquo;ll talk about how to add other <strong>components</strong> into the window.</p>
+
+<!--more-->
+
+
+<p>Known how to set up a window, we can add <strong>components</strong> (such as buttons, labels, password fields) into the frame. First, we can add a label saying &ldquo;hello, world&rdquo;.
+``` java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+}   
+</code></pre>
+
+<p>}
+<code>
+Run it and you'll find that the window shows "hello, world" vertically-centering and horizontally-left. If you create another label and add it to the window like this:
+</code> java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+}   
+</code></pre>
+
+<p>}
+<code>
+an interesting thing happened: "hello, world" is replaced by "just another label". There are lots of instances that you would not want that. The reason for this is that there is no layout in the frame; Java doesn't know where to place them. Thus, we need add a layout. The simplest layout is *flow-layout*. Like its name, it just put components side by side. Add this layout:
+</code> java GUIExample.java
+package example;</p>
+
+<p>import java.awt.FlowLayout;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+    setLayout(new FlowLayout()); // set the layout as flow-layout
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+}   
+</code></pre>
+
+<p>}
+```
+Voilà. Two labels are side by side now; you may not want the labels like that, we&rsquo;ll explore other layouts later. Try to resize your window and see what happened with labels.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (1)]]></title>
