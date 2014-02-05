@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gui | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/gui/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-04T19:24:25+00:00</updated>
+  <updated>2014-02-05T02:17:01+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -22,6 +22,8 @@
 
 <!--more-->
 
+
+<p>For Swing, the most basic GUI element is a <strong>frame</strong>. Basically, the frame is the window showed in your desktop containing other elements like buttons, labels and many things you see in Java applications. We will talk about how to create a simple frame in this tutorial.</p>
 
 <p>First, we need create two Java sources in the same package.
 ``` java Main.java
@@ -102,7 +104,7 @@ package example;</p>
 ```
 Compile and run; you should see a medium-sized window in your up-left corner. The program doesn&rsquo;t do anything except show a empty window.</p>
 
-<p>Known how to set up a window, we can add components (such as buttons, labels, password fields) into the window.</p>
+<p>Known how to set up a window, we can add <strong>components</strong> (such as buttons, labels, password fields) into the frame.</p>
 ]]></content>
   </entry>
   
