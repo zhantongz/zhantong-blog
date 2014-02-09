@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/technology/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-05T07:03:56+00:00</updated>
+  <updated>2014-02-09T09:53:30+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -107,6 +107,8 @@ public GUIExample() {
 <p>}
 ```
 Voilà. Two labels are side by side now; you may not want the labels like that, we&rsquo;ll explore other layouts later. Try to resize your window and see what happened with labels.</p>
+
+<p>Next step, we&rsquo;ll add a text-field displaying and entering text.</p>
 ]]></content>
   </entry>
   
