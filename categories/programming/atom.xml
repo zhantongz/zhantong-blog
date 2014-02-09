@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/programming/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-09T18:52:19+00:00</updated>
+  <updated>2014-02-09T19:20:31+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -208,12 +208,12 @@ Compile and run; you should see a medium-sized window in your up-left corner. Th
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[C++ 分解偶数为两个奇质数之和 - [C++]Decompose Even Numbers as the Sums of Two Odd Primes]]></title>
+    <title type="html"><![CDATA[C++ 分解偶数为两质数之和 - [C++]Decompose Even Numbers as the Sums of Two Primes]]></title>
     <link href="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/"/>
     <updated>2013-02-13T07:24:00+00:00</updated>
     <id>http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes</id>
-    <content type="html"><![CDATA[<p>分解偶数为两个奇质数之和的程序：<br/>
-A program to decomposit even numbers as the sums of two odd primes:</p>
+    <content type="html"><![CDATA[<p>分解偶数为两质数之和的程序：<br/>
+A program to decomposit even numbers as the sums of two primes:</p>
 
 <!-- more -->
 
