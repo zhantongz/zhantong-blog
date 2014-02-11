@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/technology/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-11T00:44:51+00:00</updated>
+  <updated>2014-02-11T00:56:10+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (2)]]></title>
-    <link href="http://blog.zhantong.org/2014/02/05/java-swing-gui-intro-2/"/>
-    <updated>2014-02-05T06:22:41+00:00</updated>
-    <id>http://blog.zhantong.org/2014/02/05/java-swing-gui-intro-2</id>
+    <link href="http://blog.zhantong.org/2014/02/11/java-swing-gui-intro-2/"/>
+    <updated>2014-02-11T00:56:00+00:00</updated>
+    <id>http://blog.zhantong.org/2014/02/11/java-swing-gui-intro-2</id>
     <content type="html"><![CDATA[<p>In the last post, we created a simple and empty window. In this post, we&rsquo;ll talk about how to add other <strong>components</strong> into the window.</p>
 
 <!--more-->
@@ -138,7 +138,7 @@ import javax.swing.JTextField;</p>
 <pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
 private JLabel helloWorld; // create a (J)Label named helloWorld
 private JLabel anotherLb;
-private JTextField textfield; // create a (j)TextField named textfield
+private JTextField textfield; // create a (J)TextField named textfield
 
 public GUIExample() {
     // create a JFrame (superclass) with a title
@@ -162,15 +162,66 @@ public GUIExample() {
 Compile and run; you'll find a text field saying "I'm a text field!" and you can type in it. If you press ENTER, there is nothing happening. It should not happen anything! You didn't tell the computer how to deal with your action of pressing. You may find the length of textfield is too short or too long; in order to change it, you need to define the size of the text field: change
 </code> java
 textfield = new JTextField(&ldquo;I&rsquo;m a text field!&rdquo;);
-``
+<code>
 to
-<code>java
-textfield = new JTextField("I'm a text field!", 20); // create a text field with a size of 20
-</code>
-Sometimes, you don&rsquo;t need the user to change the field, so, you can disable the editing of the field. Add the following line after the assignment of textfield:
-<code>java
+</code> java
+textfield = new JTextField(&ldquo;I&rsquo;m a text field!&rdquo;, 20); // create a text field with a size of 20
+<code>
+Sometimes, you don't need the user to change the field, so, you can disable the editing of the field. Add the following line after the assignment of *textfield*:
+</code> java
 textfield.setEditable(false); // set the field uneditable
-</code></p>
+```
+As well, there are some texts that you don&rsquo;t want others to see, e.g. passwords. To create a field that can hide text, just change <strong>JTextField</strong> to <strong>JPasswordField</strong>.</p>
+
+<p>Another useful component is buttons. To create a button, as you may figure out, it&rsquo;s using <em>J</em>Button. Like other components, you can add it to the window:
+``` java GUIExample.java
+package example;</p>
+
+<p>import java.awt.FlowLayout;</p>
+
+<p>import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+private JTextField textfield; // create a (j)TextField named textfield
+private JButton button; // create a (J)Button named button
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+    setLayout(new FlowLayout()); // set the layout as flow-layout
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+    // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+
+    textfield = new JTextField("I'm a text field!", 20); // create a textfield with a default line "I'm a text field!"
+    textfield.setEditable(false); // set the field uneditable
+    add(textfield);
+
+    button = new JButton("Click me"); // create a button that reads "Click me"
+    add(button);
+}   
+</code></pre>
+
+<p>}
+<code>
+Compile and run; a button showed up. Nothing happens if you click it for the same reason as the text field. You may need to disable a button to prevent an action; you can disable button by adding
+</code> java
+button.setEnabled(false);
+```
+after the assignment of <em>button</em>.</p>
+
+<p>In the next post, we&rsquo;ll talk about how to add actions to buttons, text field, etc.</p>
 ]]></content>
   </entry>
   
