@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-09T19:20:31+00:00</updated>
+  <updated>2014-02-11T00:43:36+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -168,9 +168,118 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Voilà. Two labels are side by side now; you may not want the labels like that, we&rsquo;ll explore other layouts later. Try to resize your window and see what happened with labels.</p>
+<p>Voilà. Two labels are side by side now; you may not want the labels like that, we&rsquo;ll explore other layouts later. Try to resize your window and see what happened with labels. While you are resizing the window, the arrangement and position of label is changing and messing up your design. To avoid this, we can set the window unresizable.</p>
+
+<figure class='code'><figcaption><span>Main.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">GUIExample</span> <span class="n">window</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GUIExample</span><span class="o">();</span> <span class="c1">// create a GUIExample called window</span>
+</span><span class='line'>      <span class="n">window</span><span class="o">.</span><span class="na">setBounds</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span> <span class="c1">// set the window with size of 300 * 500 at (0, 0) of your screen, i.e. up-left corner</span>
+</span><span class='line'>      <span class="n">window</span><span class="o">.</span><span class="na">setResizable</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">// forbid the change of size</span>
+</span><span class='line'>      <span class="n">window</span><span class="o">.</span><span class="na">setVisible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span> <span class="c1">// show the window</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Next step, we&rsquo;ll add a text-field displaying and entering text.</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.awt.FlowLayout</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JLabel</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JTextField</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8892132944702143244L</span><span class="o">;</span> <span class="c1">// to remove warning in eclipse</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">helloWorld</span><span class="o">;</span> <span class="c1">// create a (J)Label named helloWorld</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">anotherLb</span><span class="o">;</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JTextField</span> <span class="n">textfield</span><span class="o">;</span> <span class="c1">// create a (j)TextField named textfield</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">GUIExample</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// create a JFrame (superclass) with a title</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="s">&quot;GUI Intro&quot;</span><span class="o">);</span> <span class="c1">// &quot;GUI Intro&quot; is the title for the window</span>
+</span><span class='line'>      <span class="n">setLayout</span><span class="o">(</span><span class="k">new</span> <span class="n">FlowLayout</span><span class="o">());</span> <span class="c1">// set the layout as flow-layout</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">helloWorld</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">);</span> <span class="c1">// create a label saying &quot;hello, world&quot; </span>
+</span><span class='line'>                                              <span class="c1">// and assign it to helloWorld</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">helloWorld</span><span class="o">);</span> <span class="c1">// add the label to the window (GUIExample)</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">anotherLb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;just another label&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">anotherLb</span><span class="o">);</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">textfield</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;I&#39;m a text field!&quot;</span><span class="o">);</span> <span class="c1">// create a textfield with a default line &quot;I&#39;m a text field!&quot;</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">textfield</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Compile and run; you&rsquo;ll find a text field saying &ldquo;I&rsquo;m a text field!&rdquo; and you can type in it. If you press ENTER, there is nothing happening. It should not happen anything! You didn&rsquo;t tell the computer how to deal with your action of pressing. You may find the length of textfield is too short or too long; in order to change it, you need to define the size of the text field: change</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">textfield</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;I&#39;m a text field!&quot;</span><span class="o">);</span>
+</span><span class='line'><span class="err">``</span>
+</span><span class='line'><span class="n">to</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> java
+textfield = new JTextField(&ldquo;I&rsquo;m a text field!&rdquo;, 20); // create a text field with a size of 20</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Sometimes</span><span class="o">,</span> <span class="n">you</span> <span class="n">don</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">need</span> <span class="n">the</span> <span class="n">user</span> <span class="n">to</span> <span class="n">change</span> <span class="n">the</span> <span class="n">field</span><span class="o">,</span> <span class="n">so</span><span class="o">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">disable</span> <span class="n">the</span> <span class="n">editing</span> <span class="n">of</span> <span class="n">the</span> <span class="n">field</span><span class="o">.</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">following</span> <span class="n">line</span> <span class="n">after</span> <span class="n">the</span> <span class="n">assignment</span> <span class="n">of</span> <span class="nl">textfield:</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> java
+textfield.setEditable(false); // set the field uneditable
+&#8220;`</p>
 ]]></content>
   </entry>
   

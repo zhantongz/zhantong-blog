@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/java/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-09T19:20:31+00:00</updated>
+  <updated>2014-02-11T00:43:36+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -105,10 +105,72 @@ public GUIExample() {
 </code></pre>
 
 <p>}
-```
-Voilà. Two labels are side by side now; you may not want the labels like that, we&rsquo;ll explore other layouts later. Try to resize your window and see what happened with labels.</p>
+<code>
+Voilà. Two labels are side by side now; you may not want the labels like that, we'll explore other layouts later. Try to resize your window and see what happened with labels. While you are resizing the window, the arrangement and position of label is changing and messing up your design. To avoid this, we can set the window unresizable.
+</code> java Main.java
+package example;</p>
 
-<p>Next step, we&rsquo;ll add a text-field displaying and entering text.</p>
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+    GUIExample window = new GUIExample(); // create a GUIExample called window
+    window.setBounds(0, 0, 300, 500); // set the window with size of 300 * 500 at (0, 0) of your screen, i.e. up-left corner
+    window.setResizable(false); // forbid the change of size
+    window.setVisible(true); // show the window
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Next step, we&rsquo;ll add a text-field displaying and entering text.
+``` java GUIExample.java
+package example;</p>
+
+<p>import java.awt.FlowLayout;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+private JTextField textfield; // create a (j)TextField named textfield
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+    setLayout(new FlowLayout()); // set the layout as flow-layout
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+
+    textfield = new JTextField("I'm a text field!"); // create a textfield with a default line "I'm a text field!"
+    add(textfield);
+}
+</code></pre>
+
+<p>}
+<code>
+Compile and run; you'll find a text field saying "I'm a text field!" and you can type in it. If you press ENTER, there is nothing happening. It should not happen anything! You didn't tell the computer how to deal with your action of pressing. You may find the length of textfield is too short or too long; in order to change it, you need to define the size of the text field: change
+</code> java
+textfield = new JTextField(&ldquo;I&rsquo;m a text field!&rdquo;);
+``
+to
+<code>java
+textfield = new JTextField("I'm a text field!", 20); // create a text field with a size of 20
+</code>
+Sometimes, you don&rsquo;t need the user to change the field, so, you can disable the editing of the field. Add the following line after the assignment of textfield:
+<code>java
+textfield.setEditable(false); // set the field uneditable
+</code></p>
 ]]></content>
   </entry>
   
