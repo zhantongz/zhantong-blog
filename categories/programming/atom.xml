@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/programming/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-01T18:28:27+00:00</updated>
+  <updated>2014-03-01T18:29:50+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -18,8 +18,7 @@
     <link href="http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3/"/>
     <updated>2014-03-01T18:30:00+00:00</updated>
     <id>http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3</id>
-    <content type="html"><![CDATA[<p>After creating different components, the program doesn&rsquo;t actually do anything. If you click a button or enter something into a text-field, nothing will happen. That&rsquo;s because you didn&rsquo;t tell the computer what to do. In order to make the program interactive, you need an action listener (to monitor if an action happened, e.g a button is clicked) and an event handler (to tell the program to do something, e.g. update a label).
-<em>UPDATING</em></p>
+    <content type="html"><![CDATA[<p>After creating different components, the program doesn&rsquo;t actually do anything. If you click a button or enter something into a text-field, nothing will happen. That&rsquo;s because you didn&rsquo;t tell the computer what to do. In order to make the program interactive, you need an action listener (to monitor if an action happened, e.g a button is clicked) and an event handler (to tell the program to do something, e.g. update a label).</p>
 
 <!--more-->
 
