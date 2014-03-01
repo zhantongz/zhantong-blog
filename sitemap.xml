@@ -1,46 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>
-            http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/
-        </loc>
-        <lastmod>2014-02-09T19:12:22+00:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/
-        </loc>
-        <lastmod>2014-02-09T19:15:08+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.zhantong.org/2013/11/29/ela-20-1-brave-new-world-info/</loc>
-        <lastmod>2014-02-09T19:16:40+00:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress/
-        </loc>
-        <lastmod>2014-02-09T19:17:39+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/</loc>
-        <lastmod>2014-02-09T19:18:06+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/</loc>
-        <lastmod>2014-02-09T19:19:47+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.zhantong.org/2014/02/11/java-swing-gui-intro-2/</loc>
-        <lastmod>2014-02-11T00:56:00+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3/</loc>
-        <lastmod>2014-03-01T18:32:03+00:00</lastmod>
-    </url>
-    <url>
         <loc>http://blog.zhantong.org/blog/archives/</loc>
-        <lastmod>2014-03-01T18:32:03+00:00</lastmod>
+        <lastmod>2014-02-02T22:30:49+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/404.html</loc>
@@ -60,6 +22,6 @@
     </url>
     <url>
         <loc>http://blog.zhantong.org/</loc>
-        <lastmod>2014-03-01T18:32:03+00:00</lastmod>
+        <lastmod>2014-02-02T22:30:49+00:00</lastmod>
     </url>
 </urlset>
