@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-02-24T00:15:37+00:00</updated>
+  <updated>2014-03-01T18:28:27+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -15,14 +15,124 @@
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (3)]]></title>
-    <link href="http://blog.zhantong.org/2014/02/24/java-swing-gui-intro-3/"/>
-    <updated>2014-02-24T00:03:10+00:00</updated>
-    <id>http://blog.zhantong.org/2014/02/24/java-swing-gui-intro-3</id>
+    <link href="http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3/"/>
+    <updated>2014-03-01T18:30:00+00:00</updated>
+    <id>http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3</id>
     <content type="html"><![CDATA[<p>After creating different components, the program doesn&rsquo;t actually do anything. If you click a button or enter something into a text-field, nothing will happen. That&rsquo;s because you didn&rsquo;t tell the computer what to do. In order to make the program interactive, you need an action listener (to monitor if an action happened, e.g a button is clicked) and an event handler (to tell the program to do something, e.g. update a label).
 <em>UPDATING</em></p>
 
 <!--more-->
 
+
+<p>In order to do it, we need to create a new class to handle things. You can create a private class called <em>ButtonHandler</em> (as it will handle the button we created) inside <em>GUIExample</em>.</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'><span class="c1">// imported classes omitted</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>  <span class="c1">// previous delaration omitted</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JTextField</span> <span class="n">echo</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">GUIExample</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="c1">// previous assignments and settings omitted</span>
+</span><span class='line'>        <span class="c1">// change following</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">echo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;Eh?&quot;</span><span class="o">,</span> <span class="mi">20</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">echo</span><span class="o">.</span><span class="na">setEditable</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">echo</span><span class="o">);</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">textfield</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;Enter something, ^_^&quot;</span><span class="o">,</span> <span class="mi">20</span><span class="o">);</span> <span class="c1">// create a textfield with a default line &quot;I&#39;m a text field!&quot;</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">textfield</span><span class="o">);</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="o">(</span><span class="s">&quot;Click me&quot;</span><span class="o">);</span> <span class="c1">// create a button that reads &quot;Click me&quot;</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">button</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">private</span> <span class="kd">class</span> <span class="nc">ButtonHandler</span> <span class="kd">implements</span> <span class="n">ActionListener</span> <span class="o">{</span> <span class="c1">// implements ActionListener as the click of a button is an action</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>What we want to do is that entering something in <strong>textfield</strong> and clicking <strong>button</strong> will let <strong>echo</strong> show anything you entered plus &ldquo; Eh?&rdquo;. You could also change <strong>anotherLb</strong> to &ldquo;Echoed&rdquo;.</p>
+
+<p>You may notice that there is an error for <em>ButtonHandler</em>, as you did not have the required method in your class when you implement ActionListener. We&rsquo;ll add <em>actionPerformed(ActionEvent e)</em> to the class. As you may use a handler for multiple objects, it&rsquo;s a good idea to specify the source of the event.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="o">(</span><span class="n">ActionEvent</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// you must have this method as you implemented ActionListener</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getSource</span><span class="o">()</span> <span class="o">==</span> <span class="n">button</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// make sure it&#39;s _button_ that is clicked</span>
+</span><span class='line'>      <span class="n">anotherLb</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&quot;Echoed&quot;</span><span class="o">);</span> <span class="c1">// change anotherLb&#39;s text to &quot;Echoed&quot;</span>
+</span><span class='line'>      <span class="n">echo</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">textfield</span><span class="o">.</span><span class="na">getText</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot; Eh?&quot;</span><span class="o">);</span> <span class="c1">// change the text of echo to anything you entered plus &quot;Eh?&quot;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you run the program and click button, there will be nothing changed. Although you created a handler, you did not use it (i.e. you did not tell the computer when should it use the handler and the handler what should it listen to). You need to add the handler to <strong>button</strong>. Add following to <em>GUIExample()</em>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">ButtonHandler</span> <span class="n">buttonHandler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ButtonHandler</span><span class="o">();</span>
+</span><span class='line'><span class="n">button</span><span class="o">.</span><span class="na">addActionListener</span><span class="o">(</span><span class="n">buttonHandler</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, it works. To use a handler to process multiple objects, you can just add another if statement (switch can work sometimes) specifying the source. And, don&rsquo;t forget to <em>addActionListener(ActionListener l)</em>.</p>
+
+<p>Using a button is a good way to specify what the button do because you can change the text on the button; however, you want press Enter in the textfield and it will do something. In Java Swing, the textfield can &ldquo;perform&rdquo; an action when you press Enter which will trigger an ActionListener. In this echo case, you can change as following (although <em>ButtonHandler</em> may not be a good name).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="o">(</span><span class="n">ActionEvent</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// you must have this method as you implemented ActionListener</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getSource</span><span class="o">()</span> <span class="o">==</span> <span class="n">textfield</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// make sure it&#39;s _button_ that is clicked</span>
+</span><span class='line'>      <span class="n">anotherLb</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&quot;Echoed&quot;</span><span class="o">);</span> <span class="c1">// change anotherLb&#39;s text to &quot;Echoed&quot;</span>
+</span><span class='line'>      <span class="n">echo</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getActionCommand</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot; Eh?&quot;</span><span class="o">);</span> <span class="c1">// change the text of echo to anything you entered plus &quot;Eh?&quot;</span>
+</span><span class='line'>  <span class="o">}</span> <span class="c1">// you can add following if you want button to work too</span>
+</span><span class='line'>    <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getSource</span><span class="o">()</span> <span class="o">==</span> <span class="n">button</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">anotherLb</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&quot;Echoed&quot;</span><span class="o">);</span> <span class="c1">// change anotherLb&#39;s text to &quot;Echoed&quot;</span>
+</span><span class='line'>      <span class="n">echo</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">textfield</span><span class="o">.</span><span class="na">getText</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot; Eh?&quot;</span><span class="o">);</span> <span class="c1">// change the text of echo to anything you entered plus &quot;Eh?&quot;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Don&rsquo;t forget to add/delete <em>addActionListener(ActionListener l)</em>.</p>
 ]]></content>
   </entry>
   
