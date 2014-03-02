@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-02T09:01:37+00:00</updated>
+  <updated>2014-03-02T09:03:19+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -18,7 +18,13 @@
     <link href="http://blog.zhantong.org/1970/01/01/test/"/>
     <updated>1970-01-01T00:00:00+00:00</updated>
     <id>http://blog.zhantong.org/1970/01/01/test</id>
-    <content type="html"><![CDATA[<div class="embed-video-container" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=#{@td_id}&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:#{@width};height:#{@height};"></iframe></div>
+    <content type="html"><![CDATA[<div class="embed-video-container" id="yt"><iframe id="ytplayer" type="text/html" width="#{@width}" height="#{@height}" src="http://www.youtube.com/embed/#{@id}?autoplay=#{@autoplay}&origin=http://blog.zhantong.org" frameborder="0"></iframe></div>
+
+
+<script>var plid="td";if(locationWall){plid="yt"}var player=document.getElementById(plid);player.parentNode.removeChild(player)</script>
+
+
+<div class="embed-video-container" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=#{@td_id}&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:#{@width};height:#{@height};"></iframe></div>
 
 ]]></content>
   </entry>
