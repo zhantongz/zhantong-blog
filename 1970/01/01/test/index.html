@@ -113,13 +113,13 @@
   </header>
 
 
-<div class="entry-content"><div class="embed-video-container" id="yt" width="100%" height="100%"><iframe style="width:100%; max-width: 800px;" id="ytplayer" type="text/html" src="http://www.youtube.com/embed/vkJV30B6Rj4?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div>
+<div class="entry-content"><div class="embed-video-container" id="yt"><iframe id="ytplayer" type="text/html" width="100%" height="100%" src="http://www.youtube.com/embed/vkJV30B6Rj4?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div>
 
 
-<div class="embed-video-container" id="td" width="100%" height="100%"><iframe id="tdplayer" style="width:100%; max-width: 800px;" src="http://www.tudou.com/programs/view/html5embed.action?code=T2ngU1pOtOY&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:100%;height:100%;"></iframe></div>
+<div class="embed-video-container" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=T2ngU1pOtOY&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:100%;height:100%;"></iframe></div>
 
 
-<script>var plid="td";if(locationWall){plid="yt"}var player=document.getElementById(plid);player.parentNode.removeChild(player)</script>
+<script>var a="td";$('<img src="http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico">').load()||(a="yt");var b=document.getElementById(a);b.parentNode.removeChild(b);var c=$("iframe[src^='http://www.tudou.com'], iframe[src^='http://www.youtube.com']"),f=$("body");c.a(function(){$(this).data("aspectRatio",this.height/this.width).b("height").b("width")});$(window).resize(function(){var d=f.width();c.a(function(){var e=$(this);e.width(d).height(d*e.data("aspectRatio"))})}).resize();</script>
 
 </div>
 
