@@ -11,7 +11,7 @@ player.parentNode.removeChild(player);
 var $allVideos = $("iframe[src^='http://www.tudou.com'], iframe[src^='http://www.youtube.com']"),
 
     // The element that is fluid width
-    $fluidEl = $("div");
+    $fluidEl = $("div[class^='flash-video']");
 
 // Figure out and save aspect ratio for each video
 $allVideos.each(function() {
