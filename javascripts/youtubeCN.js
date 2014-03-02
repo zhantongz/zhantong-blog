@@ -1,2 +1,2 @@
-var icon = "http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico";
-var locationWall = (! $('<img src="'+ icon +'">').load());
+var icon="http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico";var locationWall=!$('<img src="'+icon+'">').load();var plid="td";if(locationWall)plid="yt";var player=document.getElementById(plid);player.parentNode.removeChild(player);var $allVideos=$("iframe[src^='http://www.tudou.com'], iframe[src^='http://www.youtube.com']"),$fluidEl=$("body");$allVideos.each(function(){$(this).data("aspectRatio",this.height/this.width).removeAttr("height").removeAttr("width")});
+$(window).resize(function(){var newWidth=$fluidEl.width();$allVideos.each(function(){var $el=$(this);$el.width(newWidth).height(newWidth*$el.data("aspectRatio"))})}).resize();
