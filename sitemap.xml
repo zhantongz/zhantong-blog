@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://blog.zhantong.org/1970/01/01/test/</loc>
+        <lastmod>2014-03-02T05:23:45+00:00</lastmod>
+    </url>
+    <url>
         <loc>
             http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/
         </loc>
@@ -40,7 +44,7 @@
     </url>
     <url>
         <loc>http://blog.zhantong.org/blog/archives/</loc>
-        <lastmod>2014-03-01T18:32:03+00:00</lastmod>
+        <lastmod>2014-03-02T05:23:45+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/404.html</loc>
@@ -60,6 +64,6 @@
     </url>
     <url>
         <loc>http://blog.zhantong.org/</loc>
-        <lastmod>2014-03-01T18:32:03+00:00</lastmod>
+        <lastmod>2014-03-02T05:23:45+00:00</lastmod>
     </url>
 </urlset>
