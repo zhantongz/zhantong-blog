@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gfw | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/gfw/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-03T03:26:15+00:00</updated>
+  <updated>2014-03-03T03:32:44+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -23,9 +23,9 @@
 <!--more-->
 
 
-<p></p>
+<p>{% gist 9317303 youtube_gfw.rb %}</p>
 
-<p></p>
+<p>{% gist 9317303 youtubeCN.js %}</p>
 ]]></content>
   </entry>
   
