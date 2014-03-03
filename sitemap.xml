@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.zhantong.org/1970/01/01/test/</loc>
-        <lastmod>2014-03-02T07:46:31+00:00</lastmod>
+        <lastmod>2014-03-03T01:58:00+00:00</lastmod>
     </url>
     <url>
         <loc>
@@ -43,8 +43,14 @@
         <lastmod>2014-03-01T18:32:03+00:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll/
+        </loc>
+        <lastmod>2014-03-03T03:17:51+00:00</lastmod>
+    </url>
+    <url>
         <loc>http://blog.zhantong.org/blog/archives/</loc>
-        <lastmod>2014-03-02T07:46:31+00:00</lastmod>
+        <lastmod>2014-03-03T03:17:51+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/404.html</loc>
@@ -64,6 +70,6 @@
     </url>
     <url>
         <loc>http://blog.zhantong.org/</loc>
-        <lastmod>2014-03-02T07:46:31+00:00</lastmod>
+        <lastmod>2014-03-03T03:17:51+00:00</lastmod>
     </url>
 </urlset>

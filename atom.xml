@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-03T01:55:57+00:00</updated>
+  <updated>2014-03-03T03:18:36+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Simple YouTube Embedment With Alternate Source for Jekyll]]></title>
+    <link href="http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
+    <updated>2014-03-03T02:14:23+00:00</updated>
+    <id>http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (3)]]></title>
