@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Test - Zhantong's Blog</title>
+  <title>Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17 - Zhantong's Blog</title>
   <meta name="author" content="Zhantong Zhang">
 
   
-  <meta name="description" content=" ">
-  
+  <meta name="description" content="How to install the driver for AR8161L wireless card for Fedora 17?">
+  <meta name="keywords" content="driver, fedora, linux, atheros wireless, compat-wireless">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.zhantong.org/1970/01/01/test">
+  <link rel="canonical" href="http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhantong's Blog" type="application/atom+xml">
@@ -84,7 +84,7 @@
   
   <header>
     
-      <h1 class="entry-title">Test</h1>
+      <h1 class="entry-title">Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17</h1>
     
     
       <p class="meta">
@@ -100,7 +100,7 @@
   
 
 
-<time datetime="1970-01-01T00:00:00+00:00" pubdate data-updated="true">1970-01-01</time>
+<time datetime="2013-01-16T03:17:00+00:00" pubdate data-updated="true">2013-01-16</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://blog.zhantong.org">Comments</a>
@@ -110,13 +110,39 @@
   </header>
 
 
-<div class="entry-content"><div class="embed-video-container" width="100%" id="yt"><iframe id="ytplayer" type="text/html" width="100%" src="http://www.youtube.com/embed/vkJV30B6Rj4?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div>
+<div class="entry-content"><p>Absolutely delete M$ Losedows 8 and install Fedora 17.</p>
+
+<p>However&hellip;Fedora 17 does not have driver of the network card.</p>
+
+<p>So I need to find the driver.</p>
+
+<p>At last, solve it with the compat-wireless 2.6.</p>
+
+<!-- more -->
 
 
-<div class="embed-video-container" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=T2ngU1pOtOY&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:100%;"></iframe></div>
+<p>First, install the kernel-headers, kernel, and gcc from dvd/cd.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> sudo yum install kernel-headers kernel gc
+</span></code></pre></td></tr></table></div></figure>
 
 
-<script src="{{ root_url }}/javascripts/youtubeCN.js" type="text/javascript"></script>
+<p>Second, download the compat-wireless (before 2012-05-10, after this date it seems the compate wireless not support AR8161) in another computer and use USB disk to copy it to fedora 17.</p>
+
+<p>The link: <a href="http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2">http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2</a></p>
+
+<p>Third, uncompress and install the driver.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> su
+</span><span class='line'><span class="gp">#</span> ./scripts/driver-select alx
+</span><span class='line'><span class="gp">#</span> make
+</span><span class='line'><span class="gp">#</span> make install
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -140,15 +166,21 @@
   
 
 
-<time datetime="1970-01-01T00:00:00+00:00" pubdate data-updated="true">1970-01-01</time>
+<time datetime="2013-01-16T03:17:00+00:00" pubdate data-updated="true">2013-01-16</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/categories/atheros/'>atheros</a>, <a class='category' href='/categories/driver/'>driver</a>, <a class='category' href='/categories/ethernet/'>ethernet</a>, <a class='category' href='/categories/fedora/'>fedora</a>, <a class='category' href='/categories/linux/'>linux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.zhantong.org/1970/01/01/test/" data-via="zhantongz" data-counturl="http://blog.zhantong.org/1970/01/01/test/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/" data-via="zhantongz" data-counturl="http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -161,12 +193,20 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/1970/01/01/test/" title="Previous Post: Test">&laquo; Test</a>
       
-        <a class="basic-alignment right" href="/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/" title="Next Post: Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17">Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17 &raquo;</a>
+      
+        <a class="basic-alignment right" href="/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/" title="Next Post: C++ 分解偶数为两质数之和 - [C++]Decompose even numbers as the sums of two primes">C++ 分解偶数为两质数之和 - [C++]Decompose even numbers as the sums of two primes &raquo;</a>
       
     </p>
   </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -263,7 +303,10 @@
       var disqus_shortname = 'zhantongblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/';
+        var disqus_url = 'http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -308,8 +351,6 @@
 
 
 <p style="color: white; text-align: right; font-family: Artifika"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" title="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License unless otherwise indicated." alt="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License unless otherwise indicated." src="/images/by-sa.png" /></a><br />A site supported by <a style="color: green" href="http://lab.zhantong.org">Zhantong Lab</a><p>
-
-<script src="/javascripts/youtubeCN.js" type="text/javascript"></script>
 
 
 
