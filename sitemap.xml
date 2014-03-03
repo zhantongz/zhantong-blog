@@ -46,11 +46,11 @@
         <loc>
             http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll/
         </loc>
-        <lastmod>2014-03-03T03:17:51+00:00</lastmod>
+        <lastmod>2014-03-03T03:26:03+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/blog/archives/</loc>
-        <lastmod>2014-03-03T03:17:51+00:00</lastmod>
+        <lastmod>2014-03-03T03:26:03+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/404.html</loc>
@@ -70,6 +70,6 @@
     </url>
     <url>
         <loc>http://blog.zhantong.org/</loc>
-        <lastmod>2014-03-03T03:17:51+00:00</lastmod>
+        <lastmod>2014-03-03T03:26:03+00:00</lastmod>
     </url>
 </urlset>
