@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/octopress/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-03T03:33:50+00:00</updated>
+  <updated>2014-03-03T03:36:35+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -23,9 +23,13 @@
 <!--more-->
 
 
-<p>{% gist 9317303 youtube_gfw.rb %}</p>
+<p><div><script src='https://gist.github.com/9317303.js?file=youtube_gfw.rb'></script>
+<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://gist.githubusercontent.com/zhantongz/9317303/raw/youtube_gfw.rb&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
+</p>
 
-<p>{% gist 9317303 youtubeCN.js %}</p>
+<p><div><script src='https://gist.github.com/9317303.js?file=youtubeCN.js'></script>
+<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://gist.githubusercontent.com/zhantongz/9317303/raw/youtubeCN.js&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
+</p>
 ]]></content>
   </entry>
   
