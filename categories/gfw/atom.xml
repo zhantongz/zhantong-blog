@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gfw | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/gfw/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-03T05:32:04+00:00</updated>
+  <updated>2014-03-03T05:36:20+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -23,13 +23,72 @@
 <!--more-->
 
 
-<p><div><script src='https://gist.github.com/9317303.js?file=youtube_gfw.rb'></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://gist.githubusercontent.com/zhantongz/9317303/raw/youtube_gfw.rb&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
-</p>
+<p><code>js youtubeCN.js
+var icon = "http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico";
+var locationWall = (! $('&lt;img src="'+ icon +'"&gt;').load()); // false if out of Mainland; true otherwise
+var plid="td"; // remove tudou if outside of Mainland
+if(locationWall)
+{
+  plid="yt" // remove youtube if inside of Mainland
+}
+var player=document.getElementById(plid);
+player.parentNode.removeChild(player);
+</code>
+``` ruby youtube_gfw.rb</p>
 
-<p><div><script src='https://gist.github.com/9317303.js?file=youtubeCN.js'></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://gist.githubusercontent.com/zhantongz/9317303/raw/youtubeCN.js&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
-</p>
+<h1>Title: Simple YouTube embedment with alternate source for Jekyll</h1>
+
+<h1>Author: Zhantong Zhang <a href="http://zhantong.org">http://zhantong.org</a></h1>
+
+<h1>Description: Easily output embeded YouTube video with a backup inside GFW (Tudou).</h1>
+
+<p>#</p>
+
+<h1>Syntax <div class="embed-video-container" width="[width" id="yt"><iframe id="ytplayer" type="text/html" width="[width" src="http://www.youtube.com/embed/youtube/id?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div><div class="embed-video-container flash-video" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=[tudou/id]&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:[width;"></iframe></div><script src="http://blog.zhantong.org/javascripts/youtubeCN.js" type="text/javascript"></script></h1>
+
+<p>module Jekyll</p>
+
+<p>  class YtbGFW &lt; Liquid::Tag</p>
+
+<pre><code>@width = ''
+@height = ''
+@autoplay = 0
+@id = ''
+@td_id = ''
+
+def initialize(tag_name, markup, tokens)
+  super
+  parameters = markup.split(" ")
+  @id = parameters.first
+  @td_id = parameters.last
+  @width = parameters[1]
+  @height = parameters[2]
+  @config = 
+  @root_url = Jekyll.configuration({})['url']
+  if parameters[1] =~ /^\d+$/
+    if parameters[2] =~ /^\d+$|^\d+px$|^\d+%$/
+      @autoplay = parameters[3]
+    else
+      @autoplay = parameters[1]
+    end
+  end
+end
+
+def render(context)
+  if @td_id != @id
+    %(&lt;div class="embed-video-container" width="#{@width}" id="yt"&gt;&lt;iframe id="ytplayer" type="text/html" width="#{@width}" src="http://www.youtube.com/embed/#{@id}?autoplay=#{@autoplay}&amp;origin=http://blog.zhantong.org" frameborder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="embed-video-container flash-video" id="td"&gt;&lt;iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=#{@td_id}&amp;resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:#{@width};"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script src="#{@root_url}/javascripts/youtubeCN.js" type="text/javascript"&gt;&lt;/script&gt;)
+  else
+    %(&lt;div class="embed-video-container" id="yt" width="#{@width}&gt;&lt;iframe id="ytplayer" type="text/html" width="#{@width}" src="http://www.youtube.com/embed/#{@id}?autoplay=#{@autoplay}&amp;origin=http://blog.zhantong.org" frameborder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script src="#{@root_url}/javascripts/youtubeCN.js" type="text/javascript"&gt;&lt;/script&gt;)
+  end
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>end</p>
+
+<p>Liquid::Template.register_tag(&lsquo;ytb&rsquo;, Jekyll::YtbGFW)
+```</p>
 ]]></content>
   </entry>
   
