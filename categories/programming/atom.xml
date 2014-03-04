@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/programming/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-03T06:53:31+00:00</updated>
+  <updated>2014-03-04T00:21:57+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -458,7 +458,7 @@ return 0;
 
 <p>}
 ```
-<img src="/images/c++-decomposit-2013-02-12.png" title="Screenshot" ></p>
+{% img /images/c++-decomposit-2013-02-12.png Screenshot %}</p>
 ]]></content>
   </entry>
   
