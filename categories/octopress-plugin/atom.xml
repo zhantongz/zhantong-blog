@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress Plugin | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/octopress-plugin/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-04T00:21:57+00:00</updated>
+  <updated>2014-03-04T00:24:46+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -24,7 +24,7 @@
 
 
 <p>Installation: Put youtubeCN.js in ROOT_PATH/source/javascripts and youtube_gfw.rb in ROOT_PATH/plugins.
-Preview: <a href="{%%20post_url%201970-01-01-test%20%}">Test</a></p>
+Preview: <a href="/1970/01/01/test/">Test</a></p>
 
 <p><code>js youtubeCN.js
 // put it in source/javascripts/ directory
@@ -48,7 +48,7 @@ player.parentNode.removeChild(player);
 
 <h1></h1>
 
-<h1>Syntax {% ytb youtube/id [width height] [autopage] [tudou/id] %}</h1>
+<h1>Syntax <div class="embed-video-container" width="[width" id="yt"><iframe id="ytplayer" type="text/html" width="[width" src="http://www.youtube.com/embed/youtube/id?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div><div class="embed-video-container flash-video" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=[tudou/id]&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:[width;"></iframe></div><script src="http://blog.zhantong.org/javascripts/youtubeCN.js" type="text/javascript"></script></h1>
 
 <p>module Jekyll</p>
 
