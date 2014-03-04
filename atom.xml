@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-04T00:27:32+00:00</updated>
+  <updated>2014-03-04T00:28:53+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -100,7 +100,7 @@ Preview: <a href="http://blog.zhantong.org/1970/01/01/test/">Test</a></p>
 </span><span class='line'><span class="c1"># Description: Easily output embeded YouTube video with a backup inside GFW (Tudou).</span>
 </span><span class='line'><span class="c1"># Use: Put this file in plugins/ and youtubeCN.js in source/javascripts</span>
 </span><span class='line'><span class="c1"># </span>
-</span><span class='line'><span class="c1"># Syntax <div class="embed-video-container" width="[width" id="yt"><iframe id="ytplayer" type="text/html" width="[width" src="http://www.youtube.com/embed/youtube/id?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div><div class="embed-video-container flash-video" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=[tudou/id]&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:[width;"></iframe></div><script src="http://blog.zhantong.org/javascripts/youtubeCN.js" type="text/javascript"></script></span>
+</span><span class='line'><span class="c1"># Syntax {% ytb youtube/id [width height] [autopage] [tudou/id] %}</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
 </span><span class='line'>
