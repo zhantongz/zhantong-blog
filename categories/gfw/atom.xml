@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gfw | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/gfw/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-04T00:30:18+00:00</updated>
+  <updated>2014-03-04T00:31:04+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -23,7 +23,7 @@
 <!--more-->
 
 
-<p>Installation: Put youtubeCN.js in ROOT_PATH/source/javascripts and youtube_gfw.rb in ROOT_PATH/plugins.<br/>
+<p>Installation: Put <em>youtubeCN.js</em> in <strong>ROOT_PATH/source/javascripts</strong> and <em>youtube_gfw.rb</em> in <strong>ROOT_PATH/plugins</strong>.<br/>
 Preview: <a href="/1970/01/01/test/">Test</a></p>
 
 <p><code>js youtubeCN.js
@@ -48,7 +48,7 @@ player.parentNode.removeChild(player);
 
 <h1></h1>
 
-<h1>Syntax  {% ytb youtube/id [width height] [autopage] [tudou/id] %} </h1>
+<h1>Syntax {% raw %} {% ytb youtube/id [width height] [autopage] [tudou/id] %} {% endraw %}</h1>
 
 <p>module Jekyll</p>
 
