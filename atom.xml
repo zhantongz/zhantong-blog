@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-15T03:26:42-06:00</updated>
+  <updated>2014-03-15T03:28:57-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (4)]]></title>
+    <link href="http://blog.zhantong.org/2014/03/15/java-swing-gui-intro-4/"/>
+    <updated>2014-03-15T03:28:47-06:00</updated>
+    <id>http://blog.zhantong.org/2014/03/15/java-swing-gui-intro-4</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Just a Thought]]></title>
