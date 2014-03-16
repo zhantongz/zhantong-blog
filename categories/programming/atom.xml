@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/programming/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-16T05:25:44+00:00</updated>
+  <updated>2014-03-16T05:36:37+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (4)]]></title>
+    <link href="http://blog.zhantong.org/2014/03/16/java-swing-gui-intro-4/"/>
+    <updated>2014-03-16T11:28:47+00:00</updated>
+    <id>http://blog.zhantong.org/2014/03/16/java-swing-gui-intro-4</id>
+    <content type="html"><![CDATA[<p>We&rsquo;ve talked about flow-layout, an easy-to-use layout. However, sometimes, you&rsquo;d like let the user change the window size while maintaining the relative layout. That&rsquo;s when we should use grid-layout. <em>UPDATING</em></p>
+
+<!--more-->
+
+
+<p>Grid-layout is a layout (obviously) that make a grid on the window. You can specify the number of rows and columns and put components into a box of the grid.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (3)]]></title>
