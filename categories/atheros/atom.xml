@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Atheros | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/atheros/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-15T03:28:57-06:00</updated>
+  <updated>2014-03-16T05:25:44+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17]]></title>
-    <link href="http://blog.zhantong.org/2013/01/15/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/"/>
-    <updated>2013-01-15T20:17:00-07:00</updated>
-    <id>http://blog.zhantong.org/2013/01/15/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17</id>
+    <link href="http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/"/>
+    <updated>2013-01-16T03:17:00+00:00</updated>
+    <id>http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17</id>
     <content type="html"><![CDATA[<p>Absolutely delete M$ Losedows 8 and install Fedora 17.</p>
 
 <p>However&hellip;Fedora 17 does not have driver of the network card.</p>
