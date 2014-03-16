@@ -4,7 +4,7 @@
   <title><![CDATA[Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-03-16T05:41:36+00:00</updated>
+  <updated>2014-03-16T05:45:09+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (4)]]></title>
     <link href="http://blog.zhantong.org/2014/03/16/java-swing-gui-intro-4/"/>
-    <updated>2014-03-16T11:28:47+00:00</updated>
+    <updated>2014-03-16T05:28:47+00:00</updated>
     <id>http://blog.zhantong.org/2014/03/16/java-swing-gui-intro-4</id>
     <content type="html"><![CDATA[<p>We&rsquo;ve talked about flow-layout, an easy-to-use layout. However, sometimes, you&rsquo;d like let the user change the window size while maintaining the relative layout. That&rsquo;s when we should use grid-layout. <em>UPDATING</em></p>
 
@@ -30,7 +30,7 @@
   <entry>
     <title type="html"><![CDATA[Just a Thought]]></title>
     <link href="http://blog.zhantong.org/2014/03/15/just-a-thought/"/>
-    <updated>2014-03-15T09:25:47+00:00</updated>
+    <updated>2014-03-15T03:25:47+00:00</updated>
     <id>http://blog.zhantong.org/2014/03/15/just-a-thought</id>
     <content type="html"><![CDATA[<p>Thinking&hellip;</p>
 ]]></content>
