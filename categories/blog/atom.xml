@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/blog/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-04-07T06:58:24+01:00</updated>
+  <updated>2014-04-26T19:02:58-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Simple YouTube Embedment With Alternate Source for Jekyll]]></title>
-    <link href="http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
-    <updated>2014-03-03T03:26:00+00:00</updated>
-    <id>http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
+    <link href="http://blog.zhantong.org/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
+    <updated>2014-03-02T20:26:00-07:00</updated>
+    <id>http://blog.zhantong.org/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
     <content type="html"><![CDATA[<p>As this blog is potentially for viewers from Mainland China, it&rsquo;s necessary to have a backup video for the stupid GFW. This plugin can use YouTube and Tudou as video sources.</p>
 
 <!--more-->
@@ -99,7 +99,7 @@ end
   <entry>
     <title type="html"><![CDATA[Migrated to Github Pages Powered by Octopress]]></title>
     <link href="http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress/"/>
-    <updated>2014-02-02T23:16:16+00:00</updated>
+    <updated>2014-02-02T16:16:16-07:00</updated>
     <id>http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress</id>
     <content type="html"><![CDATA[<p>Migrated to Github Pages!</p>
 ]]></content>
