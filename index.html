@@ -213,6 +213,77 @@ public static void insSort(int[] a) { int mark = 0; // current insertion value f
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+
+
+<figure class='code'><figcaption><span>Quick Sort</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">qckSort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">lm</span><span class="o">,</span> <span class="kt">int</span> <span class="n">rm</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="c1">// end of recursion</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">(</span><span class="n">lm</span> <span class="o">&lt;</span> <span class="n">rm</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">lm</span> <span class="o">+</span> <span class="o">(</span><span class="n">rm</span> <span class="o">-</span> <span class="n">lm</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">];</span> <span class="c1">// pivot in the middle</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// divide et conquer</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">lf</span> <span class="o">=</span> <span class="n">lm</span><span class="o">,</span> <span class="n">rf</span> <span class="o">=</span> <span class="n">rm</span><span class="o">;</span> <span class="c1">// mark flags be the markers</span>
+</span><span class='line'>      <span class="k">while</span> <span class="o">(</span><span class="n">lf</span> <span class="o">&lt;=</span> <span class="n">rf</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="k">while</span> <span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">lf</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="o">)</span>
+</span><span class='line'>              <span class="n">lf</span><span class="o">++;</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="k">while</span> <span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">rf</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="o">)</span>
+</span><span class='line'>              <span class="n">rf</span><span class="o">--;</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="k">if</span> <span class="o">(</span><span class="n">lf</span> <span class="o">&lt;</span> <span class="n">rf</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">rf</span><span class="o">];</span>
+</span><span class='line'>              <span class="n">a</span><span class="o">[</span><span class="n">rf</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">lf</span><span class="o">];</span>
+</span><span class='line'>              <span class="n">a</span><span class="o">[</span><span class="n">lf</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+</span><span class='line'>              <span class="n">lf</span><span class="o">++;</span>
+</span><span class='line'>              <span class="n">rf</span><span class="o">--;</span>
+</span><span class='line'>          <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">lf</span> <span class="o">==</span> <span class="n">rf</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">lf</span><span class="o">++;</span>
+</span><span class='line'>              <span class="n">rf</span><span class="o">--;</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// recursion</span>
+</span><span class='line'>      <span class="k">if</span> <span class="o">(</span><span class="n">rm</span> <span class="o">&gt;</span> <span class="n">lf</span><span class="o">)</span>
+</span><span class='line'>          <span class="n">qckSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">lf</span><span class="o">,</span> <span class="n">rm</span><span class="o">);</span>
+</span><span class='line'>      <span class="k">if</span> <span class="o">(</span><span class="n">lm</span> <span class="o">&lt;</span> <span class="n">rf</span><span class="o">)</span>
+</span><span class='line'>          <span class="n">qckSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">lm</span><span class="o">,</span> <span class="n">rf</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithm | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/algorithm/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-19T02:15:07-06:00</updated>
+  <updated>2014-05-19T02:39:49-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -67,6 +67,45 @@ public static void bubSort(int[] a) {</p>
             a[j] = a[i];
             a[i] = temp;
         }
+</code></pre>
+
+<p>}
+```</p>
+
+<p>``` java Quick Sort
+public static void qckSort(int[] a, int lm, int rm) {</p>
+
+<pre><code>// end of recursion
+if (lm &lt; rm) {
+    int pivot = a[lm + (rm - lm) / 2]; // pivot in the middle
+
+    // divide et conquer
+    int lf = lm, rf = rm; // mark flags be the markers
+    while (lf &lt;= rf) {
+        while (a[lf] &lt; pivot)
+            lf++;
+
+        while (a[rf] &gt; pivot)
+            rf--;
+
+        if (lf &lt; rf) {
+            int temp = a[rf];
+            a[rf] = a[lf];
+            a[lf] = temp;
+            lf++;
+            rf--;
+        } else if (lf == rf) {
+            lf++;
+            rf--;
+        }
+    }
+
+    // recursion
+    if (rm &gt; lf)
+        qckSort(a, lf, rm);
+    if (lm &lt; rf)
+        qckSort(a, lm, rf);
+}
 </code></pre>
 
 <p>}
