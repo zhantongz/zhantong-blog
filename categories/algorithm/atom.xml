@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Algorithm | Zhantong's Blog]]></title>
+  <link href="http://blog.zhantong.org/categories/algorithm/atom.xml" rel="self"/>
+  <link href="http://blog.zhantong.org/"/>
+  <updated>2014-05-19T02:10:51-06:00</updated>
+  <id>http://blog.zhantong.org/</id>
+  <author>
+    <name><![CDATA[Zhantong Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Java Codes for Some Sorting Methods]]></title>
+    <link href="http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods/"/>
+    <updated>2014-05-19T02:06:09-06:00</updated>
+    <id>http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods</id>
+    <content type="html"><![CDATA[<p>``` java &ldquo;Insertion Sort&rdquo;
+public static void insSort(int[] a) {</p>
+
+<pre><code>int mark = 0; // current insertion value
+
+for (int i = 1; i &lt; a.length; i++) {
+    mark = a[i];
+
+    int j = i - 1;
+    while (j &gt;= 0 &amp;&amp; a[j] &gt; mark) {
+        int temp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = temp;
+        j--;
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

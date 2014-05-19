@@ -9,8 +9,22 @@
   <meta name="author" content="Zhantong Zhang">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="&#8220;Insertion Sort&#8221;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+public static void insSort(int[] a) { int mark = 0; // current insertion value for ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +97,76 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2014/05/19/java-codes-for-some-sorting-methods/">Java Codes for Some Sorting Methods</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-19T02:06:09-06:00" pubdate data-updated="true">2014-05-19</time>
+        
+           | <a href="/2014/05/19/java-codes-for-some-sorting-methods/#disqus_thread"
+             data-disqus-identifier="http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span>&#8220;Insertion Sort&#8221;</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">insSort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">mark</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">// current insertion value</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">mark</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">while</span> <span class="o">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">mark</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+</span><span class='line'>          <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+</span><span class='line'>          <span class="n">a</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+</span><span class='line'>          <span class="n">j</span><span class="o">--;</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -250,45 +334,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2014/03/14/just-a-thought/">Just a Thought</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-14T21:25:47-06:00" pubdate data-updated="true">2014-03-14</time>
-        
-           | <a href="/2014/03/14/just-a-thought/#disqus_thread"
-             data-disqus-identifier="http://blog.zhantong.org/2014/03/14/just-a-thought/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Thinking&hellip;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -329,15 +374,15 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/05/19/java-codes-for-some-sorting-methods/">Java Codes for Some Sorting Methods</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/05/15/university-of-lethbridge/">University of Lethbridge</a>
       </li>
     
       <li class="post">
         <a href="/2014/04/06/trying-new-email-service-provided-by-namecheap/">Trying New Email Service Provided by Namecheap</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2014/03/30/kai-shi-xue-e-yu-.-.-./">开始学俄语。。。</a>
       </li>
     
   </ul>
@@ -632,7 +677,7 @@ cad.restore();
 </section>
 <section>
   <h1>Tag Cloud</h1>
-    <ul id="category-list"><a href='/categories/atheros' style='font-size: 107.5%'>atheros(1)</a> <a href='/categories/blog' style='font-size: 115.0%'>blog(2)</a> <a href='/categories/c-plus-plus' style='font-size: 107.5%'>c++(1)</a> <a href='/categories/driver' style='font-size: 107.5%'>driver(1)</a> <a href='/categories/ela' style='font-size: 107.5%'>ELA(1)</a> <a href='/categories/email' style='font-size: 107.5%'>email(1)</a> <a href='/categories/ethernet' style='font-size: 107.5%'>ethernet(1)</a> <a href='/categories/fedora' style='font-size: 107.5%'>fedora(1)</a> <a href='/categories/gfw' style='font-size: 115.0%'>gfw(2)</a> <a href='/categories/github' style='font-size: 107.5%'>github(1)</a> <a href='/categories/gui' style='font-size: 130.0%'>gui(4)</a> <a href='/categories/java' style='font-size: 130.0%'>java(4)</a> <a href='/categories/jekyll' style='font-size: 107.5%'>jekyll(1)</a> <a href='/categories/life' style='font-size: 130.0%'>life(4)</a> <a href='/categories/linux' style='font-size: 107.5%'>linux(1)</a> <a href='/categories/math' style='font-size: 107.5%'>math(1)</a> <a href='/categories/octopress' style='font-size: 107.5%'>octopress(1)</a> <a href='/categories/octopress-plugin' style='font-size: 107.5%'>octopress plugin(1)</a> <a href='/categories/privacy' style='font-size: 107.5%'>privacy(1)</a> <a href='/categories/programming' style='font-size: 137.5%'>programming(5)</a> <a href='/categories/school' style='font-size: 107.5%'>school(1)</a> <a href='/categories/technology' style='font-size: 160.0%'>technology(8)</a> <a href='/categories/test' style='font-size: 107.5%'>test(1)</a> <a href='/categories/tutorial' style='font-size: 130.0%'>tutorial(4)</a> </ul>
+    <ul id="category-list"><a href='/categories/algorithm' style='font-size: 106.66666666666667%'>algorithm(1)</a> <a href='/categories/atheros' style='font-size: 106.66666666666667%'>atheros(1)</a> <a href='/categories/blog' style='font-size: 113.33333333333333%'>blog(2)</a> <a href='/categories/c-plus-plus' style='font-size: 106.66666666666667%'>c++(1)</a> <a href='/categories/driver' style='font-size: 106.66666666666667%'>driver(1)</a> <a href='/categories/ela' style='font-size: 106.66666666666667%'>ELA(1)</a> <a href='/categories/email' style='font-size: 106.66666666666667%'>email(1)</a> <a href='/categories/ethernet' style='font-size: 106.66666666666667%'>ethernet(1)</a> <a href='/categories/fedora' style='font-size: 106.66666666666667%'>fedora(1)</a> <a href='/categories/gfw' style='font-size: 113.33333333333333%'>gfw(2)</a> <a href='/categories/github' style='font-size: 106.66666666666667%'>github(1)</a> <a href='/categories/gui' style='font-size: 126.66666666666667%'>gui(4)</a> <a href='/categories/java' style='font-size: 133.33333333333334%'>java(5)</a> <a href='/categories/jekyll' style='font-size: 106.66666666666667%'>jekyll(1)</a> <a href='/categories/life' style='font-size: 126.66666666666667%'>life(4)</a> <a href='/categories/linux' style='font-size: 106.66666666666667%'>linux(1)</a> <a href='/categories/math' style='font-size: 106.66666666666667%'>math(1)</a> <a href='/categories/octopress' style='font-size: 106.66666666666667%'>octopress(1)</a> <a href='/categories/octopress-plugin' style='font-size: 106.66666666666667%'>octopress plugin(1)</a> <a href='/categories/privacy' style='font-size: 106.66666666666667%'>privacy(1)</a> <a href='/categories/programming' style='font-size: 140.0%'>programming(6)</a> <a href='/categories/school' style='font-size: 106.66666666666667%'>school(1)</a> <a href='/categories/technology' style='font-size: 160.0%'>technology(9)</a> <a href='/categories/test' style='font-size: 106.66666666666667%'>test(1)</a> <a href='/categories/tutorial' style='font-size: 126.66666666666667%'>tutorial(4)</a> </ul>
 </section>
 
   

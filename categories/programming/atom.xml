@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/programming/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-15T19:24:08-06:00</updated>
+  <updated>2014-05-19T02:10:51-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java Codes for Some Sorting Methods]]></title>
+    <link href="http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods/"/>
+    <updated>2014-05-19T02:06:09-06:00</updated>
+    <id>http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods</id>
+    <content type="html"><![CDATA[<p>``` java &ldquo;Insertion Sort&rdquo;
+public static void insSort(int[] a) {</p>
+
+<pre><code>int mark = 0; // current insertion value
+
+for (int i = 1; i &lt; a.length; i++) {
+    mark = a[i];
+
+    int j = i - 1;
+    while (j &gt;= 0 &amp;&amp; a[j] &gt; mark) {
+        int temp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = temp;
+        j--;
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (4)]]></title>
@@ -412,67 +440,6 @@ package example;</p>
 Compile and run; you should see a medium-sized window in your up-left corner. The program doesn&rsquo;t do anything except show a empty window.</p>
 
 <p>Known how to set up a window, we can add <strong>components</strong> (such as buttons, labels, password fields) into the frame.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[C++ 分解偶数为两质数之和 - [C++]Decompose Even Numbers as the Sums of Two Primes]]></title>
-    <link href="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/"/>
-    <updated>2013-02-13T00:24:00-07:00</updated>
-    <id>http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes</id>
-    <content type="html"><![CDATA[<p>分解偶数为两质数之和的程序：<br/>
-A program to decomposit even numbers as the sums of two primes:</p>
-
-<!-- more -->
-
-
-<p>``` c++ Source-源代码</p>
-
-<h1>include <iostream></h1>
-
-<h1>include <cmath></h1>
-
-<p>using namespace std;</p>
-
-<p>bool isprime(int x)
-{</p>
-
-<pre><code>if(x == 2) return 1;
-
-if(x%2 == 0) return 0;
-
-for(int i = 3; i &lt;= sqrt((double)x); i += 2)
-    if(x%i == 0) return 0;
-
-return 1;
-</code></pre>
-
-<p>}</p>
-
-<p>int main()
-{</p>
-
-<pre><code>int num;
-while(cin &gt;&gt; num, num!=0)
-{
-    int sumCount = 0;
-    for(int i = 2; i &lt;= num/2; i++)
-    {
-        if(i != num - i)
-            if(isprime(i) &amp;&amp; isprime(num - i))
-    {
-            sumCount++;
-                cout &lt;&lt; i &lt;&lt; '\t' &lt;&lt; num - i &lt;&lt; endl;
-            }
-    }
-    cout &lt;&lt; sumCount &lt;&lt; endl;
-}
-return 0;
-</code></pre>
-
-<p>}
-```
-<img src="/images/c++-decomposit-2013-02-12.png" title="Screenshot" ></p>
 ]]></content>
   </entry>
   
