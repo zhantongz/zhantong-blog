@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress Plugin | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/octopress-plugin/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-19T02:55:49-06:00</updated>
+  <updated>2014-05-19T02:56:50-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -48,7 +48,7 @@ player.parentNode.removeChild(player);
 
 <h1></h1>
 
-<h1>Syntax {% raw %} {% ytb youtube/id [width height] [autopage] [tudou/id] %} {% endraw %}</h1>
+<h1>Syntax  {% ytb youtube/id [width height] [autopage] [tudou/id] %} </h1>
 
 <p>module Jekyll</p>
 
