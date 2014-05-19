@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Zhantong's Blog]]></title>
   <link href="http://blog.zhantong.org/categories/java/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-19T02:10:51-06:00</updated>
+  <updated>2014-05-19T02:15:07-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods/"/>
     <updated>2014-05-19T02:06:09-06:00</updated>
     <id>http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods</id>
-    <content type="html"><![CDATA[<p>``` java &ldquo;Insertion Sort&rdquo;
+    <content type="html"><![CDATA[<p>``` java Insertion Sort
 public static void insSort(int[] a) {</p>
 
 <pre><code>int mark = 0; // current insertion value
@@ -34,6 +34,39 @@ for (int i = 1; i &lt; a.length; i++) {
         j--;
     }
 }
+</code></pre>
+
+<p>}
+```</p>
+
+<p>``` java Selection Sort
+public static void selSort(int[] a) {</p>
+
+<pre><code>for (int i = 0; i &lt; a.length; i++) {
+    int minSpot = i;
+
+    for (int j = i + 1; j &lt; a.length; j++)
+        if (a[j] &lt; a[minSpot] ) {
+            int temp = a[minSpot] ;
+            a[minSpot] = a[j];
+            a[j] = temp;
+        }
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>``` java Bubble Sort
+public static void bubSort(int[] a) {</p>
+
+<pre><code>for (int i = 0; i &lt; a.length; i++)
+    for (int j = i + 1; j &lt; a.length; j++)
+        if (a[j] &lt; a[i]) {
+            int temp = a[j];
+            a[j] = a[i];
+            a[i] = temp;
+        }
 </code></pre>
 
 <p>}
