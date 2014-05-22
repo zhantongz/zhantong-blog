@@ -2,104 +2,112 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.zhantong.org/1969/12/31/test/</loc>
-        <lastmod>2014-03-02T18:58:00-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.zhantong.org/2013/01/15/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/
         </loc>
-        <lastmod>2014-02-09T12:12:22-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/
         </loc>
-        <lastmod>2014-02-09T12:15:08-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2013/11/29/ela-20-1-brave-new-world-info/</loc>
-        <lastmod>2014-05-20T01:21:38-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress/
         </loc>
-        <lastmod>2014-02-09T12:17:39-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/</loc>
-        <lastmod>2014-02-09T12:18:06-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/02/03/java-swing-gui-intro-1/</loc>
-        <lastmod>2014-02-09T12:19:47-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/02/10/java-swing-gui-intro-2/</loc>
-        <lastmod>2014-02-10T17:56:00-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3/</loc>
-        <lastmod>2014-03-15T23:33:41-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.zhantong.org/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll/
         </loc>
-        <lastmod>2014-05-20T00:27:16-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/03/14/just-a-thought/</loc>
-        <lastmod>2014-03-15T23:44:15-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/03/15/java-swing-gui-intro-4/</loc>
-        <lastmod>2014-03-15T23:44:00-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/03/30/kai-shi-xue-e-yu-.-.-./</loc>
-        <lastmod>2014-03-30T12:43:40-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap/
         </loc>
-        <lastmod>2014-04-06T12:10:39-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods/</loc>
-        <lastmod>2014-05-19T11:16:57-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/05/19/university-of-lethbridge/</loc>
-        <lastmod>2014-05-19T03:11:41-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/2014/05/20/ela-30-1-exit-project/</loc>
-        <lastmod>2014-05-20T01:21:38-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/blog/archives/</loc>
-        <lastmod>2014-05-20T00:33:21-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.zhantong.org/blog/</loc>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.zhantong.org/archives/</loc>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/404.html</loc>
-        <lastmod>2014-03-01T16:00:14-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/projects/</loc>
-        <lastmod>2014-02-03T17:54:37-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/robots.txt</loc>
-        <lastmod>2014-02-02T15:30:49-07:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/about/</loc>
-        <lastmod>2014-04-06T11:44:24-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://blog.zhantong.org/</loc>
-        <lastmod>2014-05-20T00:33:21-06:00</lastmod>
+        <lastmod>2014-05-21T23:34:30-06:00</lastmod>
     </url>
 </urlset>

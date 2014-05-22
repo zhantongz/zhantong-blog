@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Math | Cyclohexane >_<]]></title>
+  <title><![CDATA[Category: math | Cyclohexane >_<]]></title>
   <link href="http://blog.zhantong.org/categories/math/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-21T23:10:56-06:00</updated>
+  <updated>2014-05-21T23:34:42-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[C++ 分解偶数为两质数之和 - [C++]Decompose Even Numbers as the Sums of Two Primes]]></title>
+    <title type="html"><![CDATA[C++ 分解偶数为两质数之和 - [C++]Decompose even numbers as the sums of two primes]]></title>
     <link href="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/"/>
     <updated>2013-02-13T00:24:00-07:00</updated>
     <id>http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes</id>

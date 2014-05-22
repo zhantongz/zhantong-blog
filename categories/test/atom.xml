@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Test | Cyclohexane >_<]]></title>
+  <title><![CDATA[Category: test | Cyclohexane >_<]]></title>
   <link href="http://blog.zhantong.org/categories/test/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-21T23:10:56-06:00</updated>
+  <updated>2014-05-21T23:34:42-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
