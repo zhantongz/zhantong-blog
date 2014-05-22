@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Atheros | Cyclohexane >_<]]></title>
+  <link href="http://zhantongz.github.io//github/categories/atheros/atom.xml" rel="self"/>
+  <link href="http://zhantongz.github.io//github/"/>
+  <updated>2014-05-22T00:24:17-06:00</updated>
+  <id>http://zhantongz.github.io//github/</id>
+  <author>
+    <name><![CDATA[Zhantong Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17]]></title>
+    <link href="http://zhantongz.github.io//github/2013/01/15/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/"/>
+    <updated>2013-01-15T20:17:00-07:00</updated>
+    <id>http://zhantongz.github.io//github/2013/01/15/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17</id>
+    <content type="html"><![CDATA[<p>Absolutely delete M$ Losedows 8 and install Fedora 17.</p>
+
+<p>However&hellip;Fedora 17 does not have driver of the network card.</p>
+
+<p>So I need to find the driver.</p>
+
+<p>At last, solve it with the compat-wireless 2.6.</p>
+
+<!-- more -->
+
+
+<p>First, install the kernel-headers, kernel, and gcc from dvd/cd.</p>
+
+<p><code>console
+$ sudo yum install kernel-headers kernel gc
+</code></p>
+
+<p>Second, download the compat-wireless (before 2012-05-10, after this date it seems the compate wireless not support AR8161) in another computer and use USB disk to copy it to fedora 17.</p>
+
+<p>The link: <a href="http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2">http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2</a></p>
+
+<p>Third, uncompress and install the driver.</p>
+
+<p>``` console
+$ su</p>
+
+<h1>./scripts/driver-select alx</h1>
+
+<h1>make</h1>
+
+<h1>make install</h1>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

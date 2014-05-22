@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gfw | Cyclohexane >_<]]></title>
+  <link href="http://zhantongz.github.io//github/categories/gfw/atom.xml" rel="self"/>
+  <link href="http://zhantongz.github.io//github/"/>
+  <updated>2014-05-22T00:24:17-06:00</updated>
+  <id>http://zhantongz.github.io//github/</id>
+  <author>
+    <name><![CDATA[Zhantong Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trying New Email Service Provided by Namecheap]]></title>
+    <link href="http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
+    <updated>2014-04-06T11:45:07-06:00</updated>
+    <id>http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
+    <content type="html"><![CDATA[<p>As this domain <em>zhantong.org</em> is purchased from Namecheap, I can enjoy (maybe?) its email service without any charge for 2 months. I used QQ Business Email. It&rsquo;s good, however, it may block English messages as spam. So I start the trial with Namecheap email hosting yesterday. I&rsquo;ll write my experience in this post.</p>
+
+<!--more-->
+
+
+<p>It is a good thing that Namecheap uses Open-Xchange (OX) so that it has a much-better-looking UI instead of ugly ISP-provided email (which is a lot better than my CBE email before it switches to Google Apps). The UI is easy to use because it is simple.</p>
+
+<p>The Contacts feature has a separate folder to store people who I send email to (I could add people who send me email, too).</p>
+
+<p>It provides a web drive. Though it claims that it support WebDav, I cannot mount it in Nautilus with an HTTP 402 error. It support document viewer (and can be used to view email attachment). OX has a function to edit, but, an expensive Buisiness plan is required.</p>
+
+<p><img src="/images/2014-04-06-email-1.png" title="Namecheap's pricing and features for email hosting" alt="Namecheap's pricing and features for email hosting" /></p>
+
+<p>Namecheap email hosting: [<a href="https://www.namecheap.com/hosting/email.aspx">https://www.namecheap.com/hosting/email.aspx</a>]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple YouTube Embedment With Alternate Source for Jekyll]]></title>
+    <link href="http://zhantongz.github.io//github/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
+    <updated>2014-03-02T20:26:00-07:00</updated>
+    <id>http://zhantongz.github.io//github/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
+    <content type="html"><![CDATA[<p>As this blog is potentially for viewers from Mainland China, it&rsquo;s necessary to have a backup video for the stupid GFW. This plugin can use YouTube and Tudou as video sources.</p>
+
+<!--more-->
+
+
+<p>Installation: Put <em>youtubeCN.js</em> in <strong>ROOT_PATH/source/javascripts</strong> and <em>youtube_gfw.rb</em> in <strong>ROOT_PATH/plugins</strong>.<br/>
+Preview: <a href="/1970/01/01/test/">Test</a></p>
+
+<p><code>js youtubeCN.js
+// put it in source/javascripts/ directory
+var icon = "http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico";
+var locationWall = (! $('&lt;img src="'+ icon +'"&gt;').load()); // false if out of Mainland; true otherwise
+var plid="td"; // remove tudou if outside of Mainland
+if(locationWall)
+{
+plid="yt" // remove youtube if inside of Mainland
+}
+var player=document.getElementById(plid);
+player.parentNode.removeChild(player);
+</code>
+``` ruby youtube_gfw.rb# Title: Simple YouTube embedment with alternate source for Jekyll</p>
+
+<h1>Author: Zhantong Zhang <a href="http://zhantong.org">http://zhantong.org</a></h1>
+
+<h1>Description: Easily output embeded YouTube video with a backup inside GFW (Tudou).</h1>
+
+<h1>Use: Put this file in plugins/ and youtubeCN.js in source/javascripts</h1>
+
+<h1></h1>
+
+<h1>Syntax  {% ytb youtube/id [width height] [autopage] [tudou/id] %} </h1>
+
+<p>module Jekyll</p>
+
+<p>  class YtbGFW &lt; Liquid::Tag</p>
+
+<pre><code>@width = ''
+@height = ''
+@autoplay = 0
+@id = ''
+@td_id = ''
+
+def initialize(tag_name, markup, tokens)
+  super
+  parameters = markup.split(" ")
+  @id = parameters.first
+  @td_id = parameters.last
+  @width = parameters[1]
+  @height = parameters[2]
+  @config = 
+  @root_url = Jekyll.configuration({})['url']
+  if parameters[1] =~ /^\d+$/
+    if parameters[2] =~ /^\d+$|^\d+px$|^\d+%$/
+      @autoplay = parameters[3]
+    else
+      @autoplay = parameters[1]
+    end
+  end
+end
+
+def render(context)
+  if @td_id != @id
+    %(&lt;div class="embed-video-container" width="#{@width}" id="yt"&gt;&lt;iframe id="ytplayer" type="text/html" width="#{@width}" src="http://www.youtube.com/embed/#{@id}?autoplay=#{@autoplay}&amp;origin=http://blog.zhantong.org" frameborder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="embed-video-container flash-video" id="td"&gt;&lt;iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=#{@td_id}&amp;resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:#{@width};"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script src="#{@root_url}/javascripts/youtubeCN.js" type="text/javascript"&gt;&lt;/script&gt;)
+  else
+    %(&lt;div class="embed-video-container" id="yt" width="#{@width}&gt;&lt;iframe id="ytplayer" type="text/html" width="#{@width}" src="http://www.youtube.com/embed/#{@id}?autoplay=#{@autoplay}&amp;origin=http://blog.zhantong.org" frameborder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script src="#{@root_url}/javascripts/youtubeCN.js" type="text/javascript"&gt;&lt;/script&gt;)
+  end
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>end</p>
+
+<p>Liquid::Template.register_tag(&lsquo;ytb&rsquo;, Jekyll::YtbGFW)
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tutorial | Cyclohexane >_<]]></title>
+  <link href="http://zhantongz.github.io//github/categories/tutorial/atom.xml" rel="self"/>
+  <link href="http://zhantongz.github.io//github/"/>
+  <updated>2014-05-22T00:24:17-06:00</updated>
+  <id>http://zhantongz.github.io//github/</id>
+  <author>
+    <name><![CDATA[Zhantong Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (4)]]></title>
+    <link href="http://zhantongz.github.io//github/2014/03/15/java-swing-gui-intro-4/"/>
+    <updated>2014-03-15T23:28:47-06:00</updated>
+    <id>http://zhantongz.github.io//github/2014/03/15/java-swing-gui-intro-4</id>
+    <content type="html"><![CDATA[<p>We&rsquo;ve talked about flow-layout, an easy-to-use layout. However, sometimes, you&rsquo;d like let the user change the window size while maintaining the relative layout. That&rsquo;s when we should use grid-layout. <em>UPDATING</em></p>
+
+<!--more-->
+
+
+<p>Grid-layout is a layout (obviously) that make a grid on the window. You can specify the number of rows and columns and put components into a box of the grid.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (3)]]></title>
+    <link href="http://zhantongz.github.io//github/2014/03/01/java-swing-gui-intro-3/"/>
+    <updated>2014-03-01T11:30:00-07:00</updated>
+    <id>http://zhantongz.github.io//github/2014/03/01/java-swing-gui-intro-3</id>
+    <content type="html"><![CDATA[<p>After creating different components, the program doesn&rsquo;t actually do anything. If you click a button or enter something into a text-field, nothing will happen. That&rsquo;s because you didn&rsquo;t tell the computer what to do. In order to make the program interactive, you need an action listener (to monitor if an action happened, e.g a button is clicked) and an event handler (to tell the program to do something, e.g. update a label).</p>
+
+<!--more-->
+
+
+<p>In order to do it, we need to create a new class to handle things. You can create a private class called <em>ButtonHandler</em> (as it will handle the button we created) inside <em>GUIExample</em>.
+``` java GUIExample.java
+package example;
+// imported classes omitted
+public class GUIExample extends JFrame {</p>
+
+<pre><code>// previous delaration omitted
+private JTextField echo;
+
+public GUIExample() {
+    // previous assignments and settings omitted
+    // change following
+
+    echo = new JTextField("Eh?", 20);
+    echo.setEditable(false);
+    add(echo);
+
+    textfield = new JTextField("Enter something, ^_^", 20); // create a textfield with a default line "I'm a text field!"
+    add(textfield);
+
+    button = new JButton("Click me"); // create a button that reads "Click me"
+    add(button);
+}
+
+private class ButtonHandler implements ActionListener { // implements ActionListener as the click of a button is an action
+}
+</code></pre>
+
+<p>}
+```
+What we want to do is that entering something in <strong>textfield</strong> and clicking <strong>button</strong> will let <strong>echo</strong> show anything you entered plus &ldquo; Eh?&rdquo;. You could also change <strong>anotherLb</strong> to &ldquo;Echoed&rdquo;.</p>
+
+<p>You may notice that there is an error for <em>ButtonHandler</em>, as you did not have the required method in your class when you implement ActionListener. We&rsquo;ll add <em>actionPerformed(ActionEvent e)</em> to the class. As you may use a handler for multiple objects, it&rsquo;s a good idea to specify the source of the event.
+``` java
+public void actionPerformed(ActionEvent e) { // you must have this method as you implemented ActionListener</p>
+
+<pre><code>if (e.getSource() == button) { // make sure it's _button_ that is clicked
+    anotherLb.setText("Echoed"); // change anotherLb's text to "Echoed"
+    echo.setText(textfield.getText() + " Eh?"); // change the text of echo to anything you entered plus "Eh?"
+}
+</code></pre>
+
+<p>}
+<code>
+If you run the program and click button, there will be nothing changed. Although you created a handler, you did not use it (i.e. you did not tell the computer when should it use the handler and the handler what should it listen to). You need to add the handler to **button**. Add following to *GUIExample()*:
+</code> java
+ButtonHandler buttonHandler = new ButtonHandler();
+button.addActionListener(buttonHandler);
+```
+Now, it works. To use a handler to process multiple objects, you can just add another if statement (switch can work sometimes) specifying the source. And, don&rsquo;t forget to <em>addActionListener(ActionListener l)</em>.</p>
+
+<p>Using a button is a good way to specify what the button do because you can change the text on the button; however, you want press Enter in the textfield and it will do something. In Java Swing, the textfield can &ldquo;perform&rdquo; an action when you press Enter which will trigger an ActionListener. In this echo case, you can change as following (although <em>ButtonHandler</em> may not be a good name).
+``` java
+public void actionPerformed(ActionEvent e) { // you must have this method as you implemented ActionListener</p>
+
+<pre><code>if (e.getSource() == textfield) { // make sure it's _button_ that is clicked
+    anotherLb.setText("Echoed"); // change anotherLb's text to "Echoed"
+    echo.setText(e.getActionCommand() + " Eh?"); // change the text of echo to anything you entered plus "Eh?"
+} // you can add following if you want button to work too
+else if (e.getSource() == button) {
+    anotherLb.setText("Echoed"); // change anotherLb's text to "Echoed"
+    echo.setText(textfield.getText() + " Eh?"); // change the text of echo to anything you entered plus "Eh?"
+}
+</code></pre>
+
+<p>}
+```
+Don&rsquo;t forget to add/delete <em>addActionListener(ActionListener l)</em>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (2)]]></title>
+    <link href="http://zhantongz.github.io//github/2014/02/10/java-swing-gui-intro-2/"/>
+    <updated>2014-02-10T17:56:00-07:00</updated>
+    <id>http://zhantongz.github.io//github/2014/02/10/java-swing-gui-intro-2</id>
+    <content type="html"><![CDATA[<p>In the last post, we created a simple and empty window. In this post, we&rsquo;ll talk about how to add other <strong>components</strong> into the window.</p>
+
+<!--more-->
+
+
+<p>Known how to set up a window, we can add <strong>components</strong> (such as buttons, labels, password fields) into the frame. First, we can add a label saying &ldquo;hello, world&rdquo;.
+``` java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+}   
+</code></pre>
+
+<p>}
+<code>
+Run it and you'll find that the window shows "hello, world" vertically-centering and horizontally-left. If you create another label and add it to the window like this:
+</code> java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+}   
+</code></pre>
+
+<p>}
+<code>
+an interesting thing happened: "hello, world" is replaced by "just another label". There are lots of instances that you would not want that. The reason for this is that there is no layout in the frame; Java doesn't know where to place them. Thus, we need add a layout. The simplest layout is *flow-layout*. Like its name, it just put components side by side. Add this layout:
+</code> java GUIExample.java
+package example;</p>
+
+<p>import java.awt.FlowLayout;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+    setLayout(new FlowLayout()); // set the layout as flow-layout
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+}   
+</code></pre>
+
+<p>}
+<code>
+Voilà. Two labels are side by side now; you may not want the labels like that, we'll explore other layouts later. Try to resize your window and see what happened with labels. While you are resizing the window, the arrangement and position of label is changing and messing up your design. To avoid this, we can set the window unresizable.
+</code> java Main.java
+package example;</p>
+
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+    GUIExample window = new GUIExample(); // create a GUIExample called window
+    window.setBounds(0, 0, 300, 500); // set the window with size of 300 * 500 at (0, 0) of your screen, i.e. up-left corner
+    window.setResizable(false); // forbid the change of size
+    window.setVisible(true); // show the window
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Next step, we&rsquo;ll add a text-field displaying and entering text.
+``` java GUIExample.java
+package example;</p>
+
+<p>import java.awt.FlowLayout;</p>
+
+<p>import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+private JTextField textfield; // create a (J)TextField named textfield
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+    setLayout(new FlowLayout()); // set the layout as flow-layout
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+                                            // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+
+    textfield = new JTextField("I'm a text field!"); // create a textfield with a default line "I'm a text field!"
+    add(textfield);
+}
+</code></pre>
+
+<p>}
+<code>
+Compile and run; you'll find a text field saying "I'm a text field!" and you can type in it. If you press ENTER, there is nothing happening. It should not happen anything! You didn't tell the computer how to deal with your action of pressing. You may find the length of textfield is too short or too long; in order to change it, you need to define the size of the text field: change
+</code> java
+textfield = new JTextField(&ldquo;I&rsquo;m a text field!&rdquo;);
+<code>
+to
+</code> java
+textfield = new JTextField(&ldquo;I&rsquo;m a text field!&rdquo;, 20); // create a text field with a size of 20
+<code>
+Sometimes, you don't need the user to change the field, so, you can disable the editing of the field. Add the following line after the assignment of *textfield*:
+</code> java
+textfield.setEditable(false); // set the field uneditable
+```
+As well, there are some texts that you don&rsquo;t want others to see, e.g. passwords. To create a field that can hide text, just change <strong>JTextField</strong> to <strong>JPasswordField</strong>.</p>
+
+<p>Another useful component is buttons. To create a button, as you may figure out, it&rsquo;s using <em>J</em>Button. Like other components, you can add it to the window:
+``` java GUIExample.java
+package example;</p>
+
+<p>import java.awt.FlowLayout;</p>
+
+<p>import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // to remove warning in eclipse
+private JLabel helloWorld; // create a (J)Label named helloWorld
+private JLabel anotherLb;
+private JTextField textfield; // create a (j)TextField named textfield
+private JButton button; // create a (J)Button named button
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+    setLayout(new FlowLayout()); // set the layout as flow-layout
+
+    helloWorld = new JLabel("hello, world"); // create a label saying "hello, world" 
+    // and assign it to helloWorld
+    add(helloWorld); // add the label to the window (GUIExample)
+
+    anotherLb = new JLabel("just another label");
+    add(anotherLb);
+
+    textfield = new JTextField("I'm a text field!", 20); // create a textfield with a default line "I'm a text field!"
+    textfield.setEditable(false); // set the field uneditable
+    add(textfield);
+
+    button = new JButton("Click me"); // create a button that reads "Click me"
+    add(button);
+}   
+</code></pre>
+
+<p>}
+<code>
+Compile and run; a button showed up. Nothing happens if you click it for the same reason as the text field. You may need to disable a button to prevent an action; you can disable button by adding
+</code> java
+button.setEnabled(false);
+```
+after the assignment of <em>button</em>.</p>
+
+<p>In the next post, we&rsquo;ll talk about how to add actions to buttons, text field, etc.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Java Swing GUI Intro (1)]]></title>
+    <link href="http://zhantongz.github.io//github/2014/02/03/java-swing-gui-intro-1/"/>
+    <updated>2014-02-03T23:45:21-07:00</updated>
+    <id>http://zhantongz.github.io//github/2014/02/03/java-swing-gui-intro-1</id>
+    <content type="html"><![CDATA[<p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
+
+<!--more-->
+
+
+<p>For Swing, the most basic GUI element is a <strong>frame</strong>. Basically, the frame is the window showed in your desktop containing other elements like buttons, labels and many things you see in Java applications. We will talk about how to create a simple frame in this tutorial.</p>
+
+<p>First, we need create two Java sources in the same package.
+``` java Main.java
+package example;</p>
+
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+
+}
+</code></pre>
+
+<p>}
+<code>
+</code> java GUIExample.java
+package example;</p>
+
+<p>public class GUIExample {</p>
+
+<p>}
+<code>
+Let GUIExample extend JFrame, i.e. GUIExample is a JFrame (a window). Don't forget import appropriate packages/classes.
+</code> java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<p>}
+<code>
+Now, we have a empty class, we need a constructor for this class for a window.
+</code> java GUIExample.java
+package example;</p>
+
+<p>import javax.swing.JFrame;</p>
+
+<p>public class GUIExample extends JFrame {</p>
+
+<pre><code>private static final long serialVersionUID = -8892132944702143244L; // remove warning in eclipse
+
+public GUIExample() {
+    // create a JFrame (superclass) with a title
+    super("GUI Intro"); // "GUI Intro" is the title for the window
+}
+</code></pre>
+
+<p>}
+<code>
+Til now, no other class refers to GUIExample. Main class is for running the window:
+</code> java Main.java
+package example;</p>
+
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+    GUIExample window = new GUIExample(); // create a GUIExample called window
+    window.setVisible(true); // show the window
+}
+</code></pre>
+
+<p>}
+<code>
+If you run the program, you should see a very small "window" in your desktop environment. Obviously, it should not be such small.
+</code> java Main.java
+package example;</p>
+
+<p>public class Main {</p>
+
+<pre><code>public static void main(String[] args) {
+    GUIExample window = new GUIExample(); // create a GUIExample called window
+    window.setBounds(0, 0, 300, 500); // set the window with size of 300 * 500 at (0, 0) of your screen, i.e. up-left corner
+    window.setVisible(true); // show the window
+}
+</code></pre>
+
+<p>}
+```
+Compile and run; you should see a medium-sized window in your up-left corner. The program doesn&rsquo;t do anything except show a empty window.</p>
+
+<p>Known how to set up a window, we can add <strong>components</strong> (such as buttons, labels, password fields) into the frame.</p>
+]]></content>
+  </entry>
+  
+</feed>
