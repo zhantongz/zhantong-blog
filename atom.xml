@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Cyclohexane >_<]]></title>
   <link href="http://zhantongz.github.io//github/atom.xml" rel="self"/>
   <link href="http://zhantongz.github.io//github/"/>
-  <updated>2014-05-22T00:11:22-06:00</updated>
+  <updated>2014-05-22T00:11:59-06:00</updated>
   <id>http://zhantongz.github.io//github/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Zhantong Zhang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
