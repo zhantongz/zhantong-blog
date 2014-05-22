@@ -4,7 +4,7 @@
   <title><![CDATA[Cyclohexane >_<]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-21T23:34:42-06:00</updated>
+  <updated>2014-05-21T23:38:25-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -32,7 +32,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Java codes for some sorting methods]]></title>
+    <title type="html"><![CDATA[Java Codes for Some Sorting Methods]]></title>
     <link href="http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods/"/>
     <updated>2014-05-19T02:06:09-06:00</updated>
     <id>http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods</id>
@@ -195,7 +195,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Trying new email service provided by Namecheap]]></title>
+    <title type="html"><![CDATA[Trying New Email Service Provided by Namecheap]]></title>
     <link href="http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
     <updated>2014-04-06T11:45:07-06:00</updated>
     <id>http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
@@ -240,7 +240,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Just a thought]]></title>
+    <title type="html"><![CDATA[Just a Thought]]></title>
     <link href="http://blog.zhantong.org/2014/03/14/just-a-thought/"/>
     <updated>2014-03-14T21:25:47-06:00</updated>
     <id>http://blog.zhantong.org/2014/03/14/just-a-thought</id>
@@ -249,7 +249,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Simple YouTube embedment with alternate source for Jekyll]]></title>
+    <title type="html"><![CDATA[Simple YouTube Embedment With Alternate Source for Jekyll]]></title>
     <link href="http://blog.zhantong.org/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
     <updated>2014-03-02T20:26:00-07:00</updated>
     <id>http://blog.zhantong.org/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
@@ -1110,7 +1110,7 @@ Preview: <a href="http://blog.zhantong.org/1970/01/01/test/">Test</a></p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Migrated to Github Pages powered by Octopress]]></title>
+    <title type="html"><![CDATA[Migrated to Github Pages Powered by Octopress]]></title>
     <link href="http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress/"/>
     <updated>2014-02-02T16:16:16-07:00</updated>
     <id>http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress</id>
@@ -1153,7 +1153,7 @@ Preview: <a href="http://blog.zhantong.org/1970/01/01/test/">Test</a></p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[C++ 分解偶数为两质数之和 - [C++]Decompose even numbers as the sums of two primes]]></title>
+    <title type="html"><![CDATA[C++ 分解偶数为两质数之和 - [C++]Decompose Even Numbers as the Sums of Two Primes]]></title>
     <link href="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/"/>
     <updated>2013-02-13T00:24:00-07:00</updated>
     <id>http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes</id>

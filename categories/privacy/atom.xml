@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: privacy | Cyclohexane >_<]]></title>
+  <title><![CDATA[Category: Privacy | Cyclohexane >_<]]></title>
   <link href="http://blog.zhantong.org/categories/privacy/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-05-21T23:34:42-06:00</updated>
+  <updated>2014-05-21T23:38:25-06:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Trying new email service provided by Namecheap]]></title>
+    <title type="html"><![CDATA[Trying New Email Service Provided by Namecheap]]></title>
     <link href="http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
     <updated>2014-04-06T11:45:07-06:00</updated>
     <id>http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
