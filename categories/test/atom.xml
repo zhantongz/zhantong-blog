@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Test | Cyclohexane >_<]]></title>
+  <link href="http://blog.zhantong.org/categories/test/atom.xml" rel="self"/>
+  <link href="http://blog.zhantong.org/"/>
+  <updated>2014-05-21T23:40:33-06:00</updated>
+  <id>http://blog.zhantong.org/</id>
+  <author>
+    <name><![CDATA[Zhantong Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World! 你好世界！Saluton Mondo!]]></title>
+    <link href="http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/"/>
+    <updated>2014-02-02T16:32:36-07:00</updated>
+    <id>http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo</id>
+    <content type="html"><![CDATA[<p>Hello World! 你好世界！Saluton Mondo!</p>
+
+<!--more-->
+
+
+<p><code>php php
+&lt;?php
+echo "hello, world";
+echo "你好世界";
+echo "saluton, mondo";
+?&gt;
+</code>
+``` cpp c++</p>
+
+<h1>include <iostream></h1>
+
+<p>using namespace std;</p>
+
+<p>int main()
+{
+  cout &lt;&lt; &ldquo;hello, world&rdquo; &lt;&lt; endl;
+  cout &lt;&lt; &ldquo;你好世界&rdquo; &lt;&lt; endl;
+  cout &lt;&lt; &ldquo;saluton, mondo&rdquo; &lt;&lt; endl;
+  return 0;
+}
+<code>
+</code> go golang <br/>
+package main</p>
+
+<p>func main() {
+  println(&ldquo;hello, world&rdquo;)
+  println(&ldquo;你好世界&rdquo;)
+  println(&ldquo;saluton, mondo&rdquo;)
+}
+<code>
+</code> html HTML
+&lt;!DOCTYPE html>
+<html>
+  <head></p>
+
+<pre><code>&lt;title&gt;hello, world&lt;/title&gt;
+</code></pre>
+
+<p>  </head>
+  <body></p>
+
+<pre><code>&lt;p&gt;hello, world&lt;/p&gt;
+&lt;p&gt;你好世界&lt;/p&gt;
+&lt;p&gt;saluton, mondo&lt;/p&gt;
+</code></pre>
+
+<p>  </body>
+</html>
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

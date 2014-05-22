@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Privacy | Cyclohexane >_<]]></title>
+  <link href="http://blog.zhantong.org/categories/privacy/atom.xml" rel="self"/>
+  <link href="http://blog.zhantong.org/"/>
+  <updated>2014-05-21T23:40:33-06:00</updated>
+  <id>http://blog.zhantong.org/</id>
+  <author>
+    <name><![CDATA[Zhantong Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trying New Email Service Provided by Namecheap]]></title>
+    <link href="http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
+    <updated>2014-04-06T11:45:07-06:00</updated>
+    <id>http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
+    <content type="html"><![CDATA[<p>As this domain <em>zhantong.org</em> is purchased from Namecheap, I can enjoy (maybe?) its email service without any charge for 2 months. I used QQ Business Email. It&rsquo;s good, however, it may block English messages as spam. So I start the trial with Namecheap email hosting yesterday. I&rsquo;ll write my experience in this post.</p>
+
+<!--more-->
+
+
+<p>It is a good thing that Namecheap uses Open-Xchange (OX) so that it has a much-better-looking UI instead of ugly ISP-provided email (which is a lot better than my CBE email before it switches to Google Apps). The UI is easy to use because it is simple.</p>
+
+<p>The Contacts feature has a separate folder to store people who I send email to (I could add people who send me email, too).</p>
+
+<p>It provides a web drive. Though it claims that it support WebDav, I cannot mount it in Nautilus with an HTTP 402 error. It support document viewer (and can be used to view email attachment). OX has a function to edit, but, an expensive Buisiness plan is required.</p>
+
+<p><img src="/images/2014-04-06-email-1.png" title="Namecheap's pricing and features for email hosting" alt="Namecheap's pricing and features for email hosting" /></p>
+
+<p>Namecheap email hosting: [<a href="https://www.namecheap.com/hosting/email.aspx">https://www.namecheap.com/hosting/email.aspx</a>]</p>
+]]></content>
+  </entry>
+  
+</feed>

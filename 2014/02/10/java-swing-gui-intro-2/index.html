@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Java Swing GUI Intro (2) - Cyclohexane >_<</title>
+  <meta name="author" content="Zhantong Zhang">
+
+  
+  <meta name="description" content="How to create a Swing application step by step (2)">
+  <meta name="keywords" content="java, swing, gui, gui application, tutorial, swing application">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.zhantong.org/2014/02/10/java-swing-gui-intro-2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Cyclohexane >_<" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36454841-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Cyclohexane >_<</a></h1>
+  
+    <h2>To be chair, or to be boat, that is the question—</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.zhantong.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Java Swing GUI Intro (2)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-10T17:56:00-07:00" pubdate data-updated="true">2014-02-10</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://blog.zhantong.org">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In the last post, we created a simple and empty window. In this post, we&rsquo;ll talk about how to add other <strong>components</strong> into the window.</p>
+
+<!--more-->
+
+
+<p>Known how to set up a window, we can add <strong>components</strong> (such as buttons, labels, password fields) into the frame. First, we can add a label saying &ldquo;hello, world&rdquo;.</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JLabel</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8892132944702143244L</span><span class="o">;</span> <span class="c1">// to remove warning in eclipse</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">helloWorld</span><span class="o">;</span> <span class="c1">// create a (J)Label named helloWorld</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">GUIExample</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// create a JFrame (superclass) with a title</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="s">&quot;GUI Intro&quot;</span><span class="o">);</span> <span class="c1">// &quot;GUI Intro&quot; is the title for the window</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">helloWorld</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">);</span> <span class="c1">// create a label saying &quot;hello, world&quot; </span>
+</span><span class='line'>                                              <span class="c1">// and assign it to helloWorld</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">helloWorld</span><span class="o">);</span> <span class="c1">// add the label to the window (GUIExample)</span>
+</span><span class='line'>  <span class="o">}</span>    
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run it and you&rsquo;ll find that the window shows &ldquo;hello, world&rdquo; vertically-centering and horizontally-left. If you create another label and add it to the window like this:</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JLabel</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8892132944702143244L</span><span class="o">;</span> <span class="c1">// to remove warning in eclipse</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">helloWorld</span><span class="o">;</span> <span class="c1">// create a (J)Label named helloWorld</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">anotherLb</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">GUIExample</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// create a JFrame (superclass) with a title</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="s">&quot;GUI Intro&quot;</span><span class="o">);</span> <span class="c1">// &quot;GUI Intro&quot; is the title for the window</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">helloWorld</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">);</span> <span class="c1">// create a label saying &quot;hello, world&quot; </span>
+</span><span class='line'>                                              <span class="c1">// and assign it to helloWorld</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">helloWorld</span><span class="o">);</span> <span class="c1">// add the label to the window (GUIExample)</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">anotherLb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;just another label&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">anotherLb</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>    
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>an interesting thing happened: &ldquo;hello, world&rdquo; is replaced by &ldquo;just another label&rdquo;. There are lots of instances that you would not want that. The reason for this is that there is no layout in the frame; Java doesn&rsquo;t know where to place them. Thus, we need add a layout. The simplest layout is <em>flow-layout</em>. Like its name, it just put components side by side. Add this layout:</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.awt.FlowLayout</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JLabel</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8892132944702143244L</span><span class="o">;</span> <span class="c1">// to remove warning in eclipse</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">helloWorld</span><span class="o">;</span> <span class="c1">// create a (J)Label named helloWorld</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">anotherLb</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">GUIExample</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// create a JFrame (superclass) with a title</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="s">&quot;GUI Intro&quot;</span><span class="o">);</span> <span class="c1">// &quot;GUI Intro&quot; is the title for the window</span>
+</span><span class='line'>      <span class="n">setLayout</span><span class="o">(</span><span class="k">new</span> <span class="n">FlowLayout</span><span class="o">());</span> <span class="c1">// set the layout as flow-layout</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">helloWorld</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">);</span> <span class="c1">// create a label saying &quot;hello, world&quot; </span>
+</span><span class='line'>                                              <span class="c1">// and assign it to helloWorld</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">helloWorld</span><span class="o">);</span> <span class="c1">// add the label to the window (GUIExample)</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">anotherLb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;just another label&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">anotherLb</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>    
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Voilà. Two labels are side by side now; you may not want the labels like that, we&rsquo;ll explore other layouts later. Try to resize your window and see what happened with labels. While you are resizing the window, the arrangement and position of label is changing and messing up your design. To avoid this, we can set the window unresizable.</p>
+
+<figure class='code'><figcaption><span>Main.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">GUIExample</span> <span class="n">window</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GUIExample</span><span class="o">();</span> <span class="c1">// create a GUIExample called window</span>
+</span><span class='line'>      <span class="n">window</span><span class="o">.</span><span class="na">setBounds</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span> <span class="c1">// set the window with size of 300 * 500 at (0, 0) of your screen, i.e. up-left corner</span>
+</span><span class='line'>      <span class="n">window</span><span class="o">.</span><span class="na">setResizable</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">// forbid the change of size</span>
+</span><span class='line'>      <span class="n">window</span><span class="o">.</span><span class="na">setVisible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span> <span class="c1">// show the window</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next step, we&rsquo;ll add a text-field displaying and entering text.</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.awt.FlowLayout</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JLabel</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JTextField</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8892132944702143244L</span><span class="o">;</span> <span class="c1">// to remove warning in eclipse</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">helloWorld</span><span class="o">;</span> <span class="c1">// create a (J)Label named helloWorld</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">anotherLb</span><span class="o">;</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JTextField</span> <span class="n">textfield</span><span class="o">;</span> <span class="c1">// create a (J)TextField named textfield</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">GUIExample</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// create a JFrame (superclass) with a title</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="s">&quot;GUI Intro&quot;</span><span class="o">);</span> <span class="c1">// &quot;GUI Intro&quot; is the title for the window</span>
+</span><span class='line'>      <span class="n">setLayout</span><span class="o">(</span><span class="k">new</span> <span class="n">FlowLayout</span><span class="o">());</span> <span class="c1">// set the layout as flow-layout</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">helloWorld</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">);</span> <span class="c1">// create a label saying &quot;hello, world&quot; </span>
+</span><span class='line'>                                              <span class="c1">// and assign it to helloWorld</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">helloWorld</span><span class="o">);</span> <span class="c1">// add the label to the window (GUIExample)</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">anotherLb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;just another label&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">anotherLb</span><span class="o">);</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">textfield</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;I&#39;m a text field!&quot;</span><span class="o">);</span> <span class="c1">// create a textfield with a default line &quot;I&#39;m a text field!&quot;</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">textfield</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Compile and run; you&rsquo;ll find a text field saying &ldquo;I&rsquo;m a text field!&rdquo; and you can type in it. If you press ENTER, there is nothing happening. It should not happen anything! You didn&rsquo;t tell the computer how to deal with your action of pressing. You may find the length of textfield is too short or too long; in order to change it, you need to define the size of the text field: change</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">textfield</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;I&#39;m a text field!&quot;</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">textfield</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;I&#39;m a text field!&quot;</span><span class="o">,</span> <span class="mi">20</span><span class="o">);</span> <span class="c1">// create a text field with a size of 20</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sometimes, you don&rsquo;t need the user to change the field, so, you can disable the editing of the field. Add the following line after the assignment of <em>textfield</em>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">textfield</span><span class="o">.</span><span class="na">setEditable</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">// set the field uneditable</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As well, there are some texts that you don&rsquo;t want others to see, e.g. passwords. To create a field that can hide text, just change <strong>JTextField</strong> to <strong>JPasswordField</strong>.</p>
+
+<p>Another useful component is buttons. To create a button, as you may figure out, it&rsquo;s using <em>J</em>Button. Like other components, you can add it to the window:</p>
+
+<figure class='code'><figcaption><span>GUIExample.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">example</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.awt.FlowLayout</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JButton</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JLabel</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.swing.JTextField</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GUIExample</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8892132944702143244L</span><span class="o">;</span> <span class="c1">// to remove warning in eclipse</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">helloWorld</span><span class="o">;</span> <span class="c1">// create a (J)Label named helloWorld</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">anotherLb</span><span class="o">;</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JTextField</span> <span class="n">textfield</span><span class="o">;</span> <span class="c1">// create a (j)TextField named textfield</span>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">JButton</span> <span class="n">button</span><span class="o">;</span> <span class="c1">// create a (J)Button named button</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">GUIExample</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="c1">// create a JFrame (superclass) with a title</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="s">&quot;GUI Intro&quot;</span><span class="o">);</span> <span class="c1">// &quot;GUI Intro&quot; is the title for the window</span>
+</span><span class='line'>      <span class="n">setLayout</span><span class="o">(</span><span class="k">new</span> <span class="n">FlowLayout</span><span class="o">());</span> <span class="c1">// set the layout as flow-layout</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">helloWorld</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">);</span> <span class="c1">// create a label saying &quot;hello, world&quot; </span>
+</span><span class='line'>      <span class="c1">// and assign it to helloWorld</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">helloWorld</span><span class="o">);</span> <span class="c1">// add the label to the window (GUIExample)</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">anotherLb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">&quot;just another label&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">anotherLb</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">textfield</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="o">(</span><span class="s">&quot;I&#39;m a text field!&quot;</span><span class="o">,</span> <span class="mi">20</span><span class="o">);</span> <span class="c1">// create a textfield with a default line &quot;I&#39;m a text field!&quot;</span>
+</span><span class='line'>      <span class="n">textfield</span><span class="o">.</span><span class="na">setEditable</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">// set the field uneditable</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">textfield</span><span class="o">);</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="o">(</span><span class="s">&quot;Click me&quot;</span><span class="o">);</span> <span class="c1">// create a button that reads &quot;Click me&quot;</span>
+</span><span class='line'>      <span class="n">add</span><span class="o">(</span><span class="n">button</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>    
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Compile and run; a button showed up. Nothing happens if you click it for the same reason as the text field. You may need to disable a button to prevent an action; you can disable button by adding</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">button</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>after the assignment of <em>button</em>.</p>
+
+<p>In the next post, we&rsquo;ll talk about how to add actions to buttons, text field, etc.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Zhantong Zhang</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-10T17:56:00-07:00" pubdate data-updated="true">2014-02-10</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/gui/'>gui</a>, <a class='category' href='/categories/java/'>java</a>, <a class='category' href='/categories/programming/'>programming</a>, <a class='category' href='/categories/technology/'>technology</a>, <a class='category' href='/categories/tutorial/'>tutorial</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.zhantong.org/2014/02/10/java-swing-gui-intro-2/" data-via="zhantongz" data-counturl="http://blog.zhantong.org/2014/02/10/java-swing-gui-intro-2/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2014/02/03/java-swing-gui-intro-1/" title="Previous Post: Java Swing GUI Intro (1)">&laquo; Java Swing GUI Intro (1)</a>
+      
+      
+        <a class="basic-alignment right" href="/2014/03/01/java-swing-gui-intro-3/" title="Next Post: Java Swing GUI Intro (3)">Java Swing GUI Intro (3) &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>A little something about me.</p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2014/05/20/ela-30-1-exit-project/">ELA 30-1 Exit Project</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/05/19/university-of-lethbridge/">University of Lethbridge</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/05/19/java-codes-for-some-sorting-methods/">Java Codes for Some Sorting Methods</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/zhantongz">@zhantongz</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'zhantongz',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/108392055692461728118?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Tag Cloud</h1>
+    <ul id="category-list"><a href='/categories/algorithm' style='font-size: 106.66666666666667%'>algorithm(1)</a> <a href='/categories/atheros' style='font-size: 106.66666666666667%'>atheros(1)</a> <a href='/categories/blog' style='font-size: 113.33333333333333%'>blog(2)</a> <a href='/categories/c-plus-plus' style='font-size: 106.66666666666667%'>c++(1)</a> <a href='/categories/driver' style='font-size: 106.66666666666667%'>driver(1)</a> <a href='/categories/ela' style='font-size: 113.33333333333333%'>ELA(2)</a> <a href='/categories/email' style='font-size: 106.66666666666667%'>email(1)</a> <a href='/categories/ethernet' style='font-size: 106.66666666666667%'>ethernet(1)</a> <a href='/categories/fedora' style='font-size: 106.66666666666667%'>fedora(1)</a> <a href='/categories/gfw' style='font-size: 113.33333333333333%'>gfw(2)</a> <a href='/categories/github' style='font-size: 106.66666666666667%'>github(1)</a> <a href='/categories/gui' style='font-size: 126.66666666666667%'>gui(4)</a> <a href='/categories/java' style='font-size: 133.33333333333334%'>java(5)</a> <a href='/categories/jekyll' style='font-size: 106.66666666666667%'>jekyll(1)</a> <a href='/categories/life' style='font-size: 140.0%'>life(6)</a> <a href='/categories/linux' style='font-size: 106.66666666666667%'>linux(1)</a> <a href='/categories/math' style='font-size: 106.66666666666667%'>math(1)</a> <a href='/categories/octopress' style='font-size: 106.66666666666667%'>octopress(1)</a> <a href='/categories/octopress-plugin' style='font-size: 106.66666666666667%'>octopress plugin(1)</a> <a href='/categories/privacy' style='font-size: 106.66666666666667%'>privacy(1)</a> <a href='/categories/programming' style='font-size: 140.0%'>programming(6)</a> <a href='/categories/school' style='font-size: 120.0%'>school(3)</a> <a href='/categories/technology' style='font-size: 160.0%'>technology(9)</a> <a href='/categories/test' style='font-size: 106.66666666666667%'>test(1)</a> <a href='/categories/tutorial' style='font-size: 126.66666666666667%'>tutorial(4)</a> </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Zhantong Zhang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'zhantongblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.zhantong.org/2014/02/10/java-swing-gui-intro-2/';
+        var disqus_url = 'http://blog.zhantong.org/2014/02/10/java-swing-gui-intro-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
