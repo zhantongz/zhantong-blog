@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tutorial | Cyclohexane >_<]]></title>
   <link href="http://zhantongz.github.io//github/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://zhantongz.github.io//github/"/>
-  <updated>2014-05-26T16:44:30-06:00</updated>
+  <updated>2014-05-26T23:02:16+00:00</updated>
   <id>http://zhantongz.github.io//github/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (4)]]></title>
-    <link href="http://zhantongz.github.io//github/2014/03/15/java-swing-gui-intro-4/"/>
-    <updated>2014-03-15T23:28:47-06:00</updated>
-    <id>http://zhantongz.github.io//github/2014/03/15/java-swing-gui-intro-4</id>
+    <link href="http://zhantongz.github.io//github/2014/03/16/java-swing-gui-intro-4/"/>
+    <updated>2014-03-16T05:28:47+00:00</updated>
+    <id>http://zhantongz.github.io//github/2014/03/16/java-swing-gui-intro-4</id>
     <content type="html"><![CDATA[<p>We&rsquo;ve talked about flow-layout, an easy-to-use layout. However, sometimes, you&rsquo;d like let the user change the window size while maintaining the relative layout. That&rsquo;s when we should use grid-layout. <em>UPDATING</em></p>
 
 <!--more-->
@@ -30,7 +30,7 @@
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (3)]]></title>
     <link href="http://zhantongz.github.io//github/2014/03/01/java-swing-gui-intro-3/"/>
-    <updated>2014-03-01T11:30:00-07:00</updated>
+    <updated>2014-03-01T18:30:00+00:00</updated>
     <id>http://zhantongz.github.io//github/2014/03/01/java-swing-gui-intro-3</id>
     <content type="html"><![CDATA[<p>After creating different components, the program doesn&rsquo;t actually do anything. If you click a button or enter something into a text-field, nothing will happen. That&rsquo;s because you didn&rsquo;t tell the computer what to do. In order to make the program interactive, you need an action listener (to monitor if an action happened, e.g a button is clicked) and an event handler (to tell the program to do something, e.g. update a label).</p>
 
@@ -110,9 +110,9 @@ Don&rsquo;t forget to add/delete <em>addActionListener(ActionListener l)</em>.</
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (2)]]></title>
-    <link href="http://zhantongz.github.io//github/2014/02/10/java-swing-gui-intro-2/"/>
-    <updated>2014-02-10T17:56:00-07:00</updated>
-    <id>http://zhantongz.github.io//github/2014/02/10/java-swing-gui-intro-2</id>
+    <link href="http://zhantongz.github.io//github/2014/02/11/java-swing-gui-intro-2/"/>
+    <updated>2014-02-11T00:56:00+00:00</updated>
+    <id>http://zhantongz.github.io//github/2014/02/11/java-swing-gui-intro-2</id>
     <content type="html"><![CDATA[<p>In the last post, we created a simple and empty window. In this post, we&rsquo;ll talk about how to add other <strong>components</strong> into the window.</p>
 
 <!--more-->
@@ -322,9 +322,9 @@ after the assignment of <em>button</em>.</p>
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (1)]]></title>
-    <link href="http://zhantongz.github.io//github/2014/02/03/java-swing-gui-intro-1/"/>
-    <updated>2014-02-03T23:45:21-07:00</updated>
-    <id>http://zhantongz.github.io//github/2014/02/03/java-swing-gui-intro-1</id>
+    <link href="http://zhantongz.github.io//github/2014/02/04/java-swing-gui-intro-1/"/>
+    <updated>2014-02-04T06:45:21+00:00</updated>
+    <id>http://zhantongz.github.io//github/2014/02/04/java-swing-gui-intro-1</id>
     <content type="html"><![CDATA[<p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
 
 <!--more-->

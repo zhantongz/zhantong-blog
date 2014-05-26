@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gfw | Cyclohexane >_<]]></title>
   <link href="http://zhantongz.github.io//github/categories/gfw/atom.xml" rel="self"/>
   <link href="http://zhantongz.github.io//github/"/>
-  <updated>2014-05-26T16:44:30-06:00</updated>
+  <updated>2014-05-26T23:02:16+00:00</updated>
   <id>http://zhantongz.github.io//github/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Trying New Email Service Provided by Namecheap]]></title>
     <link href="http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
-    <updated>2014-04-06T11:45:07-06:00</updated>
+    <updated>2014-04-06T17:45:07+00:00</updated>
     <id>http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
     <content type="html"><![CDATA[<p>As this domain <em>zhantong.org</em> is purchased from Namecheap, I can enjoy (maybe?) its email service without any charge for 2 months. I used QQ Business Email. It&rsquo;s good, however, it may block English messages as spam. So I start the trial with Namecheap email hosting yesterday. I&rsquo;ll write my experience in this post.</p>
 
@@ -37,9 +37,9 @@
   
   <entry>
     <title type="html"><![CDATA[Simple YouTube Embedment With Alternate Source for Jekyll]]></title>
-    <link href="http://zhantongz.github.io//github/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
-    <updated>2014-03-02T20:26:00-07:00</updated>
-    <id>http://zhantongz.github.io//github/2014/03/02/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
+    <link href="http://zhantongz.github.io//github/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
+    <updated>2014-03-03T03:26:00+00:00</updated>
+    <id>http://zhantongz.github.io//github/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
     <content type="html"><![CDATA[<p>As this blog is potentially for viewers from Mainland China, it&rsquo;s necessary to have a backup video for the stupid GFW. This plugin can use YouTube and Tudou as video sources.</p>
 
 <!--more-->
