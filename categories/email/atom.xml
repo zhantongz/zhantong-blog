@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Email | Cyclohexane >_<]]></title>
   <link href="http://zhantongz.github.io//github/categories/email/atom.xml" rel="self"/>
   <link href="http://zhantongz.github.io//github/"/>
-  <updated>2014-05-27T05:37:26+00:00</updated>
+  <updated>2014-06-07T08:28:16+00:00</updated>
   <id>http://zhantongz.github.io//github/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -29,7 +29,7 @@
 
 <p>It provides a web drive. Though it claims that it support WebDav, I cannot mount it in Nautilus with an HTTP 402 error. It support document viewer (and can be used to view email attachment). OX has a function to edit, but, an expensive Buisiness plan is required.</p>
 
-<p><img src="{{ root_url }}/images/2014-04-06-email-1.png" title="Namecheap's pricing and features for email hosting" alt="Namecheap's pricing and features for email hosting" /></p>
+<p><img src="/images/2014-04-06-email-1.png" title="Namecheap's pricing and features for email hosting" alt="Namecheap's pricing and features for email hosting" /></p>
 
 <p>Namecheap email hosting: [<a href="https://www.namecheap.com/hosting/email.aspx">https://www.namecheap.com/hosting/email.aspx</a>]</p>
 ]]></content>

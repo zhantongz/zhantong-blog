@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C++ | Cyclohexane >_<]]></title>
   <link href="http://zhantongz.github.io//github/categories/c-plus-plus/atom.xml" rel="self"/>
   <link href="http://zhantongz.github.io//github/"/>
-  <updated>2014-05-27T05:37:26+00:00</updated>
+  <updated>2014-06-07T08:28:16+00:00</updated>
   <id>http://zhantongz.github.io//github/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -70,7 +70,7 @@ return 0;
 
 <p>}
 ```
-{% img /images/c++-decomposit-2013-02-12.png Screenshot %}</p>
+<img src="/images/c++-decomposit-2013-02-12.png" title="Screenshot" ></p>
 ]]></content>
   </entry>
   
