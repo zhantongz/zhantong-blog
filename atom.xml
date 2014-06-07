@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Cyclohexane >_<]]></title>
-  <link href="http://zhantongz.github.io//github/atom.xml" rel="self"/>
-  <link href="http://zhantongz.github.io//github/"/>
-  <updated>2014-06-07T19:21:51+00:00</updated>
-  <id>http://zhantongz.github.io//github/</id>
+  <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
+  <link href="http://blog.zhantong.org/"/>
+  <updated>2014-06-07T19:28:42+00:00</updated>
+  <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ELA 30-1 Exit Project]]></title>
-    <link href="http://zhantongz.github.io//github/2014/05/20/ela-30-1-exit-project/"/>
+    <link href="http://blog.zhantong.org/2014/05/20/ela-30-1-exit-project/"/>
     <updated>2014-05-20T06:33:20+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/05/20/ela-30-1-exit-project</id>
+    <id>http://blog.zhantong.org/2014/05/20/ela-30-1-exit-project</id>
     <content type="html"><![CDATA[<p><strong>This project involves the use of resources provided by others, credits are given at the end of the video below. Thus, the video portion of the project is <em>not</em> licensed under any Creative Commons License. The use of pictures is justified as fair use for education. Thank you for those who made this project possible.</strong></p>
 
 <div class="embed-video-container" width="100%" id="yt"><iframe id="ytplayer" type="text/html" width="100%" src="http://www.youtube.com/embed/8qzPHQQbRqw?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div>
@@ -26,7 +26,7 @@
 <div class="embed-video-container flash-video" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=Rlwr6Vk52a8&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:100%;"></iframe></div>
 
 
-<script src="http://zhantongz.github.io//github/javascripts/youtubeCN.js" type="text/javascript"></script>
+<script src="http://blog.zhantong.org/javascripts/youtubeCN.js" type="text/javascript"></script>
 
 
 
@@ -35,18 +35,18 @@
   
   <entry>
     <title type="html"><![CDATA[University of Lethbridge]]></title>
-    <link href="http://zhantongz.github.io//github/2014/05/19/university-of-lethbridge/"/>
+    <link href="http://blog.zhantong.org/2014/05/19/university-of-lethbridge/"/>
     <updated>2014-05-19T08:56:30+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/05/19/university-of-lethbridge</id>
+    <id>http://blog.zhantong.org/2014/05/19/university-of-lethbridge</id>
     <content type="html"><![CDATA[<p>I will almost certainly go to University of Lethbridge, provided that I do not fail ELA 30-1. I will study chemistry as a major and computer science as a minor, toward a Bachelor of Science degree. About the future, I really don&rsquo;t know much (though I fantasy much), a research chemist, a forensic scientist, a programmer, or a police officer (I don&rsquo;t know why I consider it&hellip;)? Sharing experience is appreciated. I have a lot of time to think&hellip;</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Java Codes for Some Sorting Methods]]></title>
-    <link href="http://zhantongz.github.io//github/2014/05/19/java-codes-for-some-sorting-methods/"/>
+    <link href="http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods/"/>
     <updated>2014-05-19T08:06:09+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/05/19/java-codes-for-some-sorting-methods</id>
+    <id>http://blog.zhantong.org/2014/05/19/java-codes-for-some-sorting-methods</id>
     <content type="html"><![CDATA[<figure class='code'><figcaption><span>Insertion Sort</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -207,9 +207,9 @@
   
   <entry>
     <title type="html"><![CDATA[Trying New Email Service Provided by Namecheap]]></title>
-    <link href="http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
+    <link href="http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
     <updated>2014-04-06T17:45:07+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
+    <id>http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
     <content type="html"><![CDATA[<p>As this domain <em>zhantong.org</em> is purchased from Namecheap, I can enjoy (maybe?) its email service without any charge for 2 months. I used QQ Business Email. It&rsquo;s good, however, it may block English messages as spam. So I start the trial with Namecheap email hosting yesterday. I&rsquo;ll write my experience in this post.</p>
 
 <!--more-->
@@ -221,7 +221,7 @@
 
 <p>It provides a web drive. Though it claims that it support WebDav, I cannot mount it in Nautilus with an HTTP 402 error. It support document viewer (and can be used to view email attachment). OX has a function to edit, but, an expensive Buisiness plan is required.</p>
 
-<p><img src="http://zhantongz.github.io//github/images/2014-04-06-email-1.png" title="Namecheap's pricing and features for email hosting" alt="Namecheap's pricing and features for email hosting" /></p>
+<p><img src="http://blog.zhantong.org/images/2014-04-06-email-1.png" title="Namecheap's pricing and features for email hosting" alt="Namecheap's pricing and features for email hosting" /></p>
 
 <p>Namecheap email hosting: [<a href="https://www.namecheap.com/hosting/email.aspx">https://www.namecheap.com/hosting/email.aspx</a>]</p>
 ]]></content>
@@ -229,18 +229,18 @@
   
   <entry>
     <title type="html"><![CDATA[开始学俄语。。。]]></title>
-    <link href="http://zhantongz.github.io//github/2014/03/30/kai-shi-xue-e-yu-.-.-./"/>
+    <link href="http://blog.zhantong.org/2014/03/30/kai-shi-xue-e-yu-.-.-./"/>
     <updated>2014-03-30T18:42:38+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/03/30/kai-shi-xue-e-yu-.-.-.</id>
+    <id>http://blog.zhantong.org/2014/03/30/kai-shi-xue-e-yu-.-.-.</id>
     <content type="html"><![CDATA[<p>看起来挺好玩的。</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (4)]]></title>
-    <link href="http://zhantongz.github.io//github/2014/03/16/java-swing-gui-intro-4/"/>
+    <link href="http://blog.zhantong.org/2014/03/16/java-swing-gui-intro-4/"/>
     <updated>2014-03-16T05:28:47+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/03/16/java-swing-gui-intro-4</id>
+    <id>http://blog.zhantong.org/2014/03/16/java-swing-gui-intro-4</id>
     <content type="html"><![CDATA[<p>We&rsquo;ve talked about flow-layout, an easy-to-use layout. However, sometimes, you&rsquo;d like let the user change the window size while maintaining the relative layout. That&rsquo;s when we should use grid-layout. <em>UPDATING</em></p>
 
 <!--more-->
@@ -252,25 +252,25 @@
   
   <entry>
     <title type="html"><![CDATA[Just a Thought]]></title>
-    <link href="http://zhantongz.github.io//github/2014/03/15/just-a-thought/"/>
+    <link href="http://blog.zhantong.org/2014/03/15/just-a-thought/"/>
     <updated>2014-03-15T03:25:47+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/03/15/just-a-thought</id>
+    <id>http://blog.zhantong.org/2014/03/15/just-a-thought</id>
     <content type="html"><![CDATA[<p>Thinking&hellip;</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Simple YouTube Embedment With Alternate Source for Jekyll]]></title>
-    <link href="http://zhantongz.github.io//github/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
+    <link href="http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll/"/>
     <updated>2014-03-03T03:26:00+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
+    <id>http://blog.zhantong.org/2014/03/03/simple-youtube-embedment-with-alternate-source-for-jekyll</id>
     <content type="html"><![CDATA[<p>As this blog is potentially for viewers from Mainland China, it&rsquo;s necessary to have a backup video for the stupid GFW. This plugin can use YouTube and Tudou as video sources.</p>
 
 <!--more-->
 
 
 <p>Installation: Put <em>youtubeCN.js</em> in <strong>ROOT_PATH/source/javascripts</strong> and <em>youtube_gfw.rb</em> in <strong>ROOT_PATH/plugins</strong>.<br/>
-Preview: <a href="http://zhantongz.github.io//github/1970/01/01/test/">Test</a></p>
+Preview: <a href="http://blog.zhantong.org/1970/01/01/test/">Test</a></p>
 
 <figure class='code'><figcaption><span>youtubeCN.js</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -396,9 +396,9 @@ Preview: <a href="http://zhantongz.github.io//github/1970/01/01/test/">Test</a><
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (3)]]></title>
-    <link href="http://zhantongz.github.io//github/2014/03/01/java-swing-gui-intro-3/"/>
+    <link href="http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3/"/>
     <updated>2014-03-01T18:30:00+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/03/01/java-swing-gui-intro-3</id>
+    <id>http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3</id>
     <content type="html"><![CDATA[<p>After creating different components, the program doesn&rsquo;t actually do anything. If you click a button or enter something into a text-field, nothing will happen. That&rsquo;s because you didn&rsquo;t tell the computer what to do. In order to make the program interactive, you need an action listener (to monitor if an action happened, e.g a button is clicked) and an event handler (to tell the program to do something, e.g. update a label).</p>
 
 <!--more-->
@@ -518,9 +518,9 @@ Preview: <a href="http://zhantongz.github.io//github/1970/01/01/test/">Test</a><
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (2)]]></title>
-    <link href="http://zhantongz.github.io//github/2014/02/11/java-swing-gui-intro-2/"/>
+    <link href="http://blog.zhantong.org/2014/02/11/java-swing-gui-intro-2/"/>
     <updated>2014-02-11T00:56:00+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/02/11/java-swing-gui-intro-2</id>
+    <id>http://blog.zhantong.org/2014/02/11/java-swing-gui-intro-2</id>
     <content type="html"><![CDATA[<p>In the last post, we created a simple and empty window. In this post, we&rsquo;ll talk about how to add other <strong>components</strong> into the window.</p>
 
 <!--more-->
@@ -876,9 +876,9 @@ Preview: <a href="http://zhantongz.github.io//github/1970/01/01/test/">Test</a><
   
   <entry>
     <title type="html"><![CDATA[Java Swing GUI Intro (1)]]></title>
-    <link href="http://zhantongz.github.io//github/2014/02/04/java-swing-gui-intro-1/"/>
+    <link href="http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1/"/>
     <updated>2014-02-04T06:45:21+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/02/04/java-swing-gui-intro-1</id>
+    <id>http://blog.zhantong.org/2014/02/04/java-swing-gui-intro-1</id>
     <content type="html"><![CDATA[<p>Graphic User Interface (GUI) has more fun than console (somebody thinks so). In Java, we can use Swing, a native library for GUI, to create a GUI application instead of an application only interacting with console.</p>
 
 <!--more-->
@@ -1022,9 +1022,9 @@ Preview: <a href="http://zhantongz.github.io//github/1970/01/01/test/">Test</a><
   
   <entry>
     <title type="html"><![CDATA[Hello World! 你好世界！Saluton Mondo!]]></title>
-    <link href="http://zhantongz.github.io//github/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/"/>
+    <link href="http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo/"/>
     <updated>2014-02-02T23:32:36+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo</id>
+    <id>http://blog.zhantong.org/2014/02/02/hello-world-ni-hao-shi-jie-saluton-mondo</id>
     <content type="html"><![CDATA[<p>Hello World! 你好世界！Saluton Mondo!</p>
 
 <!--more-->
@@ -1122,18 +1122,18 @@ Preview: <a href="http://zhantongz.github.io//github/1970/01/01/test/">Test</a><
   
   <entry>
     <title type="html"><![CDATA[Migrated to Github Pages Powered by Octopress]]></title>
-    <link href="http://zhantongz.github.io//github/2014/02/02/migrated-to-github-pages-powered-by-octopress/"/>
+    <link href="http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress/"/>
     <updated>2014-02-02T23:16:16+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/02/02/migrated-to-github-pages-powered-by-octopress</id>
+    <id>http://blog.zhantong.org/2014/02/02/migrated-to-github-pages-powered-by-octopress</id>
     <content type="html"><![CDATA[<p>Migrated to Github Pages!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[ELA 20-1 Brave New World Background Info.]]></title>
-    <link href="http://zhantongz.github.io//github/2013/11/29/ela-20-1-brave-new-world-info/"/>
+    <link href="http://blog.zhantong.org/2013/11/29/ela-20-1-brave-new-world-info/"/>
     <updated>2013-11-29T07:45:00+00:00</updated>
-    <id>http://zhantongz.github.io//github/2013/11/29/ela-20-1-brave-new-world-info</id>
+    <id>http://blog.zhantong.org/2013/11/29/ela-20-1-brave-new-world-info</id>
     <content type="html"><![CDATA[<h2>Background Information</h2>
 
 <h4>Technology Development with Utopia and Dystopia</h4>
@@ -1165,9 +1165,9 @@ Preview: <a href="http://zhantongz.github.io//github/1970/01/01/test/">Test</a><
   
   <entry>
     <title type="html"><![CDATA[C++ 分解偶数为两质数之和 - [C++]Decompose Even Numbers as the Sums of Two Primes]]></title>
-    <link href="http://zhantongz.github.io//github/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/"/>
+    <link href="http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes/"/>
     <updated>2013-02-13T07:24:00+00:00</updated>
-    <id>http://zhantongz.github.io//github/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes</id>
+    <id>http://blog.zhantong.org/2013/02/13/c-plus-plus-decomposit-even-numbers-to-two-odd-primes</id>
     <content type="html"><![CDATA[<p>分解偶数为两质数之和的程序：<br/>
 A program to decomposit even numbers as the sums of two primes:</p>
 
@@ -1249,15 +1249,15 @@ A program to decomposit even numbers as the sums of two primes:</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="http://zhantongz.github.io//github/images/c++-decomposit-2013-02-12.png" title="Screenshot" ></p>
+<p><img src="http://blog.zhantong.org/images/c++-decomposit-2013-02-12.png" title="Screenshot" ></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17]]></title>
-    <link href="http://zhantongz.github.io//github/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/"/>
+    <link href="http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/"/>
     <updated>2013-01-16T03:17:00+00:00</updated>
-    <id>http://zhantongz.github.io//github/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17</id>
+    <id>http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17</id>
     <content type="html"><![CDATA[<p>Absolutely delete M$ Losedows 8 and install Fedora 17.</p>
 
 <p>However&hellip;Fedora 17 does not have driver of the network card.</p>
@@ -1297,16 +1297,16 @@ A program to decomposit even numbers as the sums of two primes:</p>
   
   <entry>
     <title type="html"><![CDATA[Test]]></title>
-    <link href="http://zhantongz.github.io//github/1970/01/01/test/"/>
+    <link href="http://blog.zhantong.org/1970/01/01/test/"/>
     <updated>1970-01-01T00:00:00+00:00</updated>
-    <id>http://zhantongz.github.io//github/1970/01/01/test</id>
+    <id>http://blog.zhantong.org/1970/01/01/test</id>
     <content type="html"><![CDATA[<div class="embed-video-container" width="100%" id="yt"><iframe id="ytplayer" type="text/html" width="100%" src="http://www.youtube.com/embed/vkJV30B6Rj4?autoplay=&origin=http://blog.zhantong.org" frameborder="0"></iframe></div>
 
 
 <div class="embed-video-container flash-video" id="td"><iframe id="tdplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=T2ngU1pOtOY&resourceId=356292153_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:100%;"></iframe></div>
 
 
-<script src="http://zhantongz.github.io//github/javascripts/youtubeCN.js" type="text/javascript"></script>
+<script src="http://blog.zhantong.org/javascripts/youtubeCN.js" type="text/javascript"></script>
 
 ]]></content>
   </entry>

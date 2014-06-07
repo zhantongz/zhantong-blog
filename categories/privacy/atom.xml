@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Privacy | Cyclohexane >_<]]></title>
-  <link href="http://zhantongz.github.io//github/categories/privacy/atom.xml" rel="self"/>
-  <link href="http://zhantongz.github.io//github/"/>
-  <updated>2014-06-07T19:21:51+00:00</updated>
-  <id>http://zhantongz.github.io//github/</id>
+  <link href="http://blog.zhantong.org/categories/privacy/atom.xml" rel="self"/>
+  <link href="http://blog.zhantong.org/"/>
+  <updated>2014-06-07T19:28:42+00:00</updated>
+  <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Trying New Email Service Provided by Namecheap]]></title>
-    <link href="http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
+    <link href="http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap/"/>
     <updated>2014-04-06T17:45:07+00:00</updated>
-    <id>http://zhantongz.github.io//github/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
+    <id>http://blog.zhantong.org/2014/04/06/trying-new-email-service-provided-by-namecheap</id>
     <content type="html"><![CDATA[<p>As this domain <em>zhantong.org</em> is purchased from Namecheap, I can enjoy (maybe?) its email service without any charge for 2 months. I used QQ Business Email. It&rsquo;s good, however, it may block English messages as spam. So I start the trial with Namecheap email hosting yesterday. I&rsquo;ll write my experience in this post.</p>
 
 <!--more-->
