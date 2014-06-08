@@ -112,8 +112,38 @@
 <!--more-->
 
 
-<p>Installation: Put <em>youtubeCN.js</em> in <strong>ROOT_PATH/source/javascripts</strong> and <em>youtube_gfw.rb</em> in <strong>ROOT_PATH/plugins</strong>.<br/>
-Preview: <a href="/1970/01/01/test/">Test</a></p>
+<p>Installation: Put <em>youtubeCN.js</em> in <strong>ROOT_PATH/source/javascripts</strong> and <em>youtube_gfw.rb</em> in <strong>ROOT_PATH/plugins</strong>, and add the following CSS code in <strong>ROOT_PATH/sass/custom/_styles.scss</strong>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.flash-video</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding-bottom</span><span class="o">:</span> <span class="m">56</span><span class="o">.</span><span class="m">25</span><span class="o">%</span><span class="p">;</span> <span class="c">/* 16:9 */</span>
+</span><span class='line'>  <span class="k">padding-top</span><span class="o">:</span> <span class="m">25px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.flash-video</span> <span class="nt">iframe</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Preview: <a href="/1970/01/01/test/">Test</a></p>
 
 <figure class='code'><figcaption><span>youtubeCN.js</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
