@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Cyclohexane >_<]]></title>
   <link href="http://blog.zhantong.org/categories/technology/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-06-08T18:53:53+00:00</updated>
+  <updated>2014-06-09T22:40:57+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Computer Science 30 Final Project]]></title>
+    <link href="http://blog.zhantong.org/2014/06/08/computer-science-30-final-project/"/>
+    <updated>2014-06-08T18:53:23+00:00</updated>
+    <id>http://blog.zhantong.org/2014/06/08/computer-science-30-final-project</id>
+    <content type="html"><![CDATA[<p><div><script src='https://gist.github.com/f12911065d080be0fb29.js'></script>
+<noscript><pre><code>public class Building {
+	String name;
+	int cost;
+	int monthlyCost;
+	int price;
+	double attraction;
+	int area;
+}</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Java Codes for Some Sorting Methods]]></title>
@@ -250,87 +268,6 @@ end
 
 <p>Liquid::Template.register_tag(&lsquo;ytb&rsquo;, Jekyll::YtbGFW)
 ```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Java Swing GUI Intro (3)]]></title>
-    <link href="http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3/"/>
-    <updated>2014-03-01T18:30:00+00:00</updated>
-    <id>http://blog.zhantong.org/2014/03/01/java-swing-gui-intro-3</id>
-    <content type="html"><![CDATA[<p>After creating different components, the program doesn&rsquo;t actually do anything. If you click a button or enter something into a text-field, nothing will happen. That&rsquo;s because you didn&rsquo;t tell the computer what to do. In order to make the program interactive, you need an action listener (to monitor if an action happened, e.g a button is clicked) and an event handler (to tell the program to do something, e.g. update a label).</p>
-
-<!--more-->
-
-
-<p>In order to do it, we need to create a new class to handle things. You can create a private class called <em>ButtonHandler</em> (as it will handle the button we created) inside <em>GUIExample</em>.
-``` java GUIExample.java
-package example;
-// imported classes omitted
-public class GUIExample extends JFrame {</p>
-
-<pre><code>// previous delaration omitted
-private JTextField echo;
-
-public GUIExample() {
-    // previous assignments and settings omitted
-    // change following
-
-    echo = new JTextField("Eh?", 20);
-    echo.setEditable(false);
-    add(echo);
-
-    textfield = new JTextField("Enter something, ^_^", 20); // create a textfield with a default line "I'm a text field!"
-    add(textfield);
-
-    button = new JButton("Click me"); // create a button that reads "Click me"
-    add(button);
-}
-
-private class ButtonHandler implements ActionListener { // implements ActionListener as the click of a button is an action
-}
-</code></pre>
-
-<p>}
-```
-What we want to do is that entering something in <strong>textfield</strong> and clicking <strong>button</strong> will let <strong>echo</strong> show anything you entered plus &ldquo; Eh?&rdquo;. You could also change <strong>anotherLb</strong> to &ldquo;Echoed&rdquo;.</p>
-
-<p>You may notice that there is an error for <em>ButtonHandler</em>, as you did not have the required method in your class when you implement ActionListener. We&rsquo;ll add <em>actionPerformed(ActionEvent e)</em> to the class. As you may use a handler for multiple objects, it&rsquo;s a good idea to specify the source of the event.
-``` java
-public void actionPerformed(ActionEvent e) { // you must have this method as you implemented ActionListener</p>
-
-<pre><code>if (e.getSource() == button) { // make sure it's _button_ that is clicked
-    anotherLb.setText("Echoed"); // change anotherLb's text to "Echoed"
-    echo.setText(textfield.getText() + " Eh?"); // change the text of echo to anything you entered plus "Eh?"
-}
-</code></pre>
-
-<p>}
-<code>
-If you run the program and click button, there will be nothing changed. Although you created a handler, you did not use it (i.e. you did not tell the computer when should it use the handler and the handler what should it listen to). You need to add the handler to **button**. Add following to *GUIExample()*:
-</code> java
-ButtonHandler buttonHandler = new ButtonHandler();
-button.addActionListener(buttonHandler);
-```
-Now, it works. To use a handler to process multiple objects, you can just add another if statement (switch can work sometimes) specifying the source. And, don&rsquo;t forget to <em>addActionListener(ActionListener l)</em>.</p>
-
-<p>Using a button is a good way to specify what the button do because you can change the text on the button; however, you want press Enter in the textfield and it will do something. In Java Swing, the textfield can &ldquo;perform&rdquo; an action when you press Enter which will trigger an ActionListener. In this echo case, you can change as following (although <em>ButtonHandler</em> may not be a good name).
-``` java
-public void actionPerformed(ActionEvent e) { // you must have this method as you implemented ActionListener</p>
-
-<pre><code>if (e.getSource() == textfield) { // make sure it's _button_ that is clicked
-    anotherLb.setText("Echoed"); // change anotherLb's text to "Echoed"
-    echo.setText(e.getActionCommand() + " Eh?"); // change the text of echo to anything you entered plus "Eh?"
-} // you can add following if you want button to work too
-else if (e.getSource() == button) {
-    anotherLb.setText("Echoed"); // change anotherLb's text to "Echoed"
-    echo.setText(textfield.getText() + " Eh?"); // change the text of echo to anything you entered plus "Eh?"
-}
-</code></pre>
-
-<p>}
-```
-Don&rsquo;t forget to add/delete <em>addActionListener(ActionListener l)</em>.</p>
 ]]></content>
   </entry>
   
