@@ -4,7 +4,7 @@
   <title><![CDATA[Cyclohexane >_<]]></title>
   <link href="http://blog.zhantong.org/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-06-10T05:46:54+00:00</updated>
+  <updated>2014-06-29T23:45:02+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2nd Semester Is Over!]]></title>
+    <link href="http://blog.zhantong.org/2014/06/29/2nd-semester-is-over/"/>
+    <updated>2014-06-29T23:44:49+00:00</updated>
+    <id>http://blog.zhantong.org/2014/06/29/2nd-semester-is-over</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Computer Science 30 Final Project]]></title>
