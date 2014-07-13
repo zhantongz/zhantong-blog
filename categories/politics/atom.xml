@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Linux | Cyclohexane >_<]]></title>
-  <link href="http://blog.zhantong.org/categories/linux/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Politics | Cyclohexane >_<]]></title>
+  <link href="http://blog.zhantong.org/categories/politics/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
   <updated>2014-07-13T01:22:23+00:00</updated>
   <id>http://blog.zhantong.org/</id>
@@ -30,47 +30,6 @@
   In this case, Lenovo and Microsoft are major suppliers in PC market and operating system market. Lenovo’s worldwide market share in the first quarter was 19.2 percent, which is the largest in the world, based on [www.newsobserver.com/2014/07/10/3996839/lenovo-bolsters-its-no-1-status.html]. Microsoft shares 91.53 percent of all non-mobile computers (including laptops) according to [<a href="http://www.netmarketshare.com/">http://www.netmarketshare.com/</a>], and the market share is higher excluding Mac OS as Mac OS only supplies to Apple products.
   Their conduct can and is likely to lessen the competition in the operating system market by discouraging the entry of other competing systems. By pre-installing Windows and not offering other options, they increase the efforts needed for users to install another system as pre-existing systems may have already configured BIOS, hard drive, etc. that can cause problems in an installation of other systems. As the price includes the price of Windows, users are likely not to relinquish the software they paid for without the option of partial refund, consequently, they are not likely to try a new operating system. The tied-selling restricts the competition by discouraging users to use product from other supplier and thus discouraging a supplier\s entry, or expansion into the market.
   As a result, the current anti-competitive practice of Lenovo and Microsoft shall be prohibited and partial refund should be offered to those who were required to buy Windows when purchasing a laptop though they did not want it and never activate Windows after rejecting its user agreement.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Atheros AR8161L Gigabit Ethernet Controller Driver for Fedora 17]]></title>
-    <link href="http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17/"/>
-    <updated>2013-01-16T03:17:00+00:00</updated>
-    <id>http://blog.zhantong.org/2013/01/16/atheros-ar8161l-gigabit-ethernet-controller-driver-for-fedora-17</id>
-    <content type="html"><![CDATA[<p>Absolutely delete M$ Losedows 8 and install Fedora 17.</p>
-
-<p>However&hellip;Fedora 17 does not have driver of the network card.</p>
-
-<p>So I need to find the driver.</p>
-
-<p>At last, solve it with the compat-wireless 2.6.</p>
-
-<!-- more -->
-
-
-<p>First, install the kernel-headers, kernel, and gcc from dvd/cd.</p>
-
-<p><code>console
-$ sudo yum install kernel-headers kernel gc
-</code></p>
-
-<p>Second, download the compat-wireless (before 2012-05-10, after this date it seems the compate wireless not support AR8161) in another computer and use USB disk to copy it to fedora 17.</p>
-
-<p>The link: <a href="http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2">http://linuxwireless.org/download/compat-wireless-2.6/compat-wireless-2012-05-09-pc.tar.bz2</a></p>
-
-<p>Third, uncompress and install the driver.</p>
-
-<p>``` console
-$ su</p>
-
-<h1>./scripts/driver-select alx</h1>
-
-<h1>make</h1>
-
-<h1>make install</h1>
-
-<p>```</p>
 ]]></content>
   </entry>
   
