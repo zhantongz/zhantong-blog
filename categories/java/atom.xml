@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Cyclohexane >_<]]></title>
   <link href="http://blog.zhantong.org/categories/java/atom.xml" rel="self"/>
   <link href="http://blog.zhantong.org/"/>
-  <updated>2014-07-13T01:32:03+00:00</updated>
+  <updated>2014-07-13T01:33:30+00:00</updated>
   <id>http://blog.zhantong.org/</id>
   <author>
     <name><![CDATA[Zhantong Zhang]]></name>
@@ -18,7 +18,12 @@
     <link href="http://blog.zhantong.org/2014/06/08/computer-science-30-final-project/"/>
     <updated>2014-06-08T18:53:23+00:00</updated>
     <id>http://blog.zhantong.org/2014/06/08/computer-science-30-final-project</id>
-    <content type="html"><![CDATA[<p><div><script src='https://gist.github.com/f12911065d080be0fb29.js'></script>
+    <content type="html"><![CDATA[<p>Final Project for Computer Science 30.</p>
+
+<!-- more -->
+
+
+<p><div><script src='https://gist.github.com/f12911065d080be0fb29.js'></script>
 <noscript><pre><code>public class Building {
 	String name;
 	int cost;
